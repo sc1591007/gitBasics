@@ -1,0 +1,992 @@
+Request
+=======
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bd="http://bd.ews.hp.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bd:getPricing soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <token xsi:type="xsd:string">562472733028</token>
+         <dealNr xsi:type="xsd:long">30161569</dealNr>
+      </bd:getPricing>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Response
+=========
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Body>
+      <ns1:getPricingResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://bd.ews.hp.com">
+         <getPricingReturn href="#id0"/>
+      </ns1:getPricingResponse>
+      <multiRef id="id0" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns2:ProductPriceLines" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns2="urn:ews-structs">
+         <bd_nr xsi:type="xsd:long">30161569</bd_nr>
+         <bd_version_nr xsi:type="xsd:int">4</bd_version_nr>
+         <cntry_cd xsi:type="xsd:string">PK</cntry_cd>
+         <price_list_cd xsi:type="xsd:string">EA</price_list_cd>
+         <curr_cd xsi:type="xsd:string">UD</curr_cd>
+         <price_term_cd xsi:type="xsd:string">IN</price_term_cd>
+         <productPriceLineList soapenc:arrayType="ns2:ProductPriceLine[5]" xsi:type="soapenc:Array">
+            <productPriceLineList href="#id1"/>
+            <productPriceLineList href="#id2"/>
+            <productPriceLineList href="#id3"/>
+            <productPriceLineList href="#id4"/>
+            <productPriceLineList href="#id5"/>
+         </productPriceLineList>
+      </multiRef>
+      <multiRef id="id1" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns3:ProductPriceLine" xmlns:ns3="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <line_nr xsi:type="xsd:int">2</line_nr>
+         <line_type_cd xsi:type="xsd:string">PN</line_type_cd>
+         <prod_base_nr xsi:type="xsd:string">B5L09A</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">UD</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string">8153</prod_fam_cd>
+         <prod_desc xsi:type="xsd:string">HP Officejet Ink Collection Unit</prod_desc>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <est_value xsi:type="xsd:long">0</est_value>
+         <fsm_key xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_type xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_family_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_series_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_model_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <rollout href="#id6"/>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <use_low_prc_fl xsi:type="xsd:string">N</use_low_prc_fl>
+         <disp_comp_pr_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_fl xsi:type="xsd:string">N</max_qty_reached_fl>
+         <max_qty_reached_date xsi:type="xsd:string"/>
+         <config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <config_src xsi:type="xsd:string" xsi:nil="true"/>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+         <productPriceDateRangeList soapenc:arrayType="ns3:ProductPriceDateRange[1]" xsi:type="soapenc:Array">
+            <productPriceDateRangeList href="#id7"/>
+         </productPriceDateRangeList>
+         <commentList xsi:type="ns4:ArrayOf_tns1_Comment" xsi:nil="true" xmlns:ns4="urn:EWSDealImpl"/>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP Officejet Ink Collection Unit</long_prod_desc>
+         <geoSplit href="#id8"/>
+      </multiRef>
+      <multiRef id="id2" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns5:ProductPriceLine" xmlns:ns5="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <line_nr xsi:type="xsd:int">3</line_nr>
+         <line_type_cd xsi:type="xsd:string">PN</line_type_cd>
+         <prod_base_nr xsi:type="xsd:string">CR768A</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">DU</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string">8154</prod_fam_cd>
+         <prod_desc xsi:type="xsd:string">HP Officejet 7110 Wide Format ePrinter</prod_desc>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <est_value xsi:type="xsd:long">0</est_value>
+         <fsm_key xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_type xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_family_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_series_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_model_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <rollout href="#id9"/>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <use_low_prc_fl xsi:type="xsd:string">N</use_low_prc_fl>
+         <disp_comp_pr_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_date xsi:type="xsd:string"/>
+         <config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <config_src xsi:type="xsd:string" xsi:nil="true"/>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+         <productPriceDateRangeList soapenc:arrayType="ns5:ProductPriceDateRange[1]" xsi:type="soapenc:Array">
+            <productPriceDateRangeList href="#id10"/>
+         </productPriceDateRangeList>
+         <commentList xsi:type="ns6:ArrayOf_tns1_Comment" xsi:nil="true" xmlns:ns6="urn:EWSDealImpl"/>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP Officejet 7110 Wide Format ePrinter</long_prod_desc>
+         <geoSplit href="#id11"/>
+      </multiRef>
+      <multiRef id="id4" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns7:ProductPriceLine" xmlns:ns7="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <line_nr xsi:type="xsd:int">1</line_nr>
+         <line_type_cd xsi:type="xsd:string">PN</line_type_cd>
+         <prod_base_nr xsi:type="xsd:string">D7H14A</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">65</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string">8155</prod_fam_cd>
+         <prod_desc xsi:type="xsd:string">HP LaserJet Transfer and Roller Kit</prod_desc>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <est_value xsi:type="xsd:long">0</est_value>
+         <fsm_key xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_type xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_family_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_series_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_model_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <rollout href="#id12"/>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <use_low_prc_fl xsi:type="xsd:string">N</use_low_prc_fl>
+         <disp_comp_pr_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_fl xsi:type="xsd:string">N</max_qty_reached_fl>
+         <max_qty_reached_date xsi:type="xsd:string"/>
+         <config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <config_src xsi:type="xsd:string" xsi:nil="true"/>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+         <productPriceDateRangeList soapenc:arrayType="ns7:ProductPriceDateRange[1]" xsi:type="soapenc:Array">
+            <productPriceDateRangeList href="#id13"/>
+         </productPriceDateRangeList>
+         <commentList xsi:type="ns8:ArrayOf_tns1_Comment" xsi:nil="true" xmlns:ns8="urn:EWSDealImpl"/>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP LaserJet Transfer and Roller Kit</long_prod_desc>
+         <geoSplit href="#id14"/>
+      </multiRef>
+      <multiRef id="id5" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns9:ProductPriceLine" xmlns:ns9="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <line_nr xsi:type="xsd:int">5</line_nr>
+         <line_type_cd xsi:type="xsd:string">BD</line_type_cd>
+         <prod_base_nr xsi:type="xsd:string">6AE26AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string">0000</prod_fam_cd>
+         <prod_desc xsi:type="xsd:string">HP IDS ProOne 600 G5 21.5 NT AiO PC</prod_desc>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <est_value xsi:type="xsd:long">0</est_value>
+         <fsm_key xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_type xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_family_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_series_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_model_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <rollout href="#id15"/>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <use_low_prc_fl xsi:type="xsd:string">N</use_low_prc_fl>
+         <disp_comp_pr_fl xsi:type="xsd:string">N</disp_comp_pr_fl>
+         <max_qty_reached_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_date xsi:type="xsd:string"/>
+         <config_id xsi:type="xsd:string">90539920</config_id>
+         <config_src xsi:type="xsd:string">SOFT</config_src>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+         <productPriceDateRangeList soapenc:arrayType="ns9:ProductPriceDateRange[1]" xsi:type="soapenc:Array">
+            <productPriceDateRangeList href="#id16"/>
+         </productPriceDateRangeList>
+         <commentList xsi:type="ns10:ArrayOf_tns1_Comment" xsi:nil="true" xmlns:ns10="urn:EWSDealImpl"/>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP IDS ProOne 600 G5 21.5 NT AiO PC</long_prod_desc>
+         <geoSplit href="#id17"/>
+      </multiRef>
+      <multiRef id="id3" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns11:ProductPriceLine" xmlns:ns11="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <line_nr xsi:type="xsd:int">4</line_nr>
+         <line_type_cd xsi:type="xsd:string">PN</line_type_cd>
+         <prod_base_nr xsi:type="xsd:string">CR768A</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string">BH0</prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">DU</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string">8153</prod_fam_cd>
+         <prod_desc xsi:type="xsd:string">HP Oj 7110 WF ePrinter: VN/LK/PK-</prod_desc>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <est_value xsi:type="xsd:long">0</est_value>
+         <fsm_key xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_type xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_family_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_series_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <fsm_model_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <rollout href="#id18"/>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <use_low_prc_fl xsi:type="xsd:string">N</use_low_prc_fl>
+         <disp_comp_pr_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_fl xsi:type="xsd:string" xsi:nil="true"/>
+         <max_qty_reached_date xsi:type="xsd:string"/>
+         <config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <config_src xsi:type="xsd:string" xsi:nil="true"/>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+         <productPriceDateRangeList soapenc:arrayType="ns11:ProductPriceDateRange[1]" xsi:type="soapenc:Array">
+            <productPriceDateRangeList href="#id19"/>
+         </productPriceDateRangeList>
+         <commentList xsi:type="ns12:ArrayOf_tns1_Comment" xsi:nil="true" xmlns:ns12="urn:EWSDealImpl"/>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">VN/KH/LK/PK/BT/MV/NP/AF/LA/MM-Eng local</long_prod_desc>
+         <geoSplit href="#id20"/>
+      </multiRef>
+      <multiRef id="id18" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns13:RolloutSchedule" xmlns:ns13="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</beg_dt>
+         <end_dt xsi:type="xsd:string">31-Mar-2021 00:00</end_dt>
+         <ordr_min_qty xsi:type="xsd:int">700</ordr_min_qty>
+         <line_max_qty xsi:type="xsd:int">10000</line_max_qty>
+         <rslr_max_qty xsi:type="xsd:int">0</rslr_max_qty>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <remaining_qty xsi:type="xsd:int">0</remaining_qty>
+         <ordered_qty xsi:type="xsd:int">0</ordered_qty>
+         <shipped_qty xsi:type="xsd:int">0</shipped_qty>
+         <rebated_qty xsi:type="xsd:int">0</rebated_qty>
+         <load_type xsi:type="xsd:string">Even</load_type>
+         <monthQtyList soapenc:arrayType="xsd:int[15]" xsi:type="soapenc:Array">
+            <monthQtyList xsi:type="xsd:int">167</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+         </monthQtyList>
+      </multiRef>
+      <multiRef id="id12" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns14:RolloutSchedule" xmlns:ns14="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</beg_dt>
+         <end_dt xsi:type="xsd:string">31-Mar-2021 00:00</end_dt>
+         <ordr_min_qty xsi:type="xsd:int">700</ordr_min_qty>
+         <line_max_qty xsi:type="xsd:int">10000</line_max_qty>
+         <rslr_max_qty xsi:type="xsd:int">0</rslr_max_qty>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <remaining_qty xsi:type="xsd:int">0</remaining_qty>
+         <ordered_qty xsi:type="xsd:int">2825</ordered_qty>
+         <shipped_qty xsi:type="xsd:int">0</shipped_qty>
+         <rebated_qty xsi:type="xsd:int">0</rebated_qty>
+         <load_type xsi:type="xsd:string">Even</load_type>
+         <monthQtyList soapenc:arrayType="xsd:int[15]" xsi:type="soapenc:Array">
+            <monthQtyList xsi:type="xsd:int">167</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+         </monthQtyList>
+      </multiRef>
+      <multiRef id="id10" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns15:ProductPriceDateRange" xmlns:ns15="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <scale_id xsi:type="xsd:int">1</scale_id>
+         <auth_beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</auth_beg_dt>
+         <auth_end_dt xsi:type="xsd:string">31-Mar-2021 00:00</auth_end_dt>
+         <disc_type_cd xsi:type="xsd:string">B</disc_type_cd>
+         <prod_lst_prc_am xsi:type="xsd:double">281.0</prod_lst_prc_am>
+         <auth_prc_am xsi:type="xsd:double">180.0</auth_prc_am>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <high_rslr_a_sd_pc xsi:type="xsd:double">0.0</high_rslr_a_sd_pc>
+         <bundleComponentList xsi:type="ns16:ArrayOf_tns1_BundleComponent" xsi:nil="true" xmlns:ns16="urn:EWSDealImpl"/>
+         <source_config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <phx_rqst_cust_prc_amt xsi:type="xsd:double">0.0</phx_rqst_cust_prc_amt>
+         <target_adj_disc_pct xsi:type="xsd:double">0.0</target_adj_disc_pct>
+         <min_margin_pct xsi:type="xsd:double">0.0</min_margin_pct>
+         <target_margin_pct xsi:type="xsd:double">0.0</target_margin_pct>
+      </multiRef>
+      <multiRef id="id14" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns17:GeoSplit" xmlns:ns17="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <ap_region_pct xsi:type="xsd:double">100.0</ap_region_pct>
+         <eu_region_pct xsi:type="xsd:double">0.0</eu_region_pct>
+         <na_region_pct xsi:type="xsd:double">0.0</na_region_pct>
+         <la_region_pct xsi:type="xsd:double">0.0</la_region_pct>
+         <jp_region_pct xsi:type="xsd:double">0.0</jp_region_pct>
+         <prod_line_cd xsi:type="xsd:string">65</prod_line_cd>
+      </multiRef>
+      <multiRef id="id15" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns18:RolloutSchedule" xmlns:ns18="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</beg_dt>
+         <end_dt xsi:type="xsd:string">31-Mar-2021 00:00</end_dt>
+         <ordr_min_qty xsi:type="xsd:int">700</ordr_min_qty>
+         <line_max_qty xsi:type="xsd:int">10000</line_max_qty>
+         <rslr_max_qty xsi:type="xsd:int">0</rslr_max_qty>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <remaining_qty xsi:type="xsd:int">0</remaining_qty>
+         <ordered_qty xsi:type="xsd:int">1402</ordered_qty>
+         <shipped_qty xsi:type="xsd:int">0</shipped_qty>
+         <rebated_qty xsi:type="xsd:int">0</rebated_qty>
+         <load_type xsi:type="xsd:string">Even</load_type>
+         <monthQtyList soapenc:arrayType="xsd:int[15]" xsi:type="soapenc:Array">
+            <monthQtyList xsi:type="xsd:int">167</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+         </monthQtyList>
+      </multiRef>
+      <multiRef id="id7" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns19:ProductPriceDateRange" xmlns:ns19="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <scale_id xsi:type="xsd:int">1</scale_id>
+         <auth_beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</auth_beg_dt>
+         <auth_end_dt xsi:type="xsd:string">31-Mar-2021 00:00</auth_end_dt>
+         <disc_type_cd xsi:type="xsd:string">B</disc_type_cd>
+         <prod_lst_prc_am xsi:type="xsd:double">46.0</prod_lst_prc_am>
+         <auth_prc_am xsi:type="xsd:double">30.0</auth_prc_am>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <high_rslr_a_sd_pc xsi:type="xsd:double">0.0</high_rslr_a_sd_pc>
+         <bundleComponentList xsi:type="ns20:ArrayOf_tns1_BundleComponent" xsi:nil="true" xmlns:ns20="urn:EWSDealImpl"/>
+         <source_config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <phx_rqst_cust_prc_amt xsi:type="xsd:double">0.0</phx_rqst_cust_prc_amt>
+         <target_adj_disc_pct xsi:type="xsd:double">0.0</target_adj_disc_pct>
+         <min_margin_pct xsi:type="xsd:double">0.0</min_margin_pct>
+         <target_margin_pct xsi:type="xsd:double">0.0</target_margin_pct>
+      </multiRef>
+      <multiRef id="id8" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns21:GeoSplit" xmlns:ns21="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <ap_region_pct xsi:type="xsd:double">100.0</ap_region_pct>
+         <eu_region_pct xsi:type="xsd:double">0.0</eu_region_pct>
+         <na_region_pct xsi:type="xsd:double">0.0</na_region_pct>
+         <la_region_pct xsi:type="xsd:double">0.0</la_region_pct>
+         <jp_region_pct xsi:type="xsd:double">0.0</jp_region_pct>
+         <prod_line_cd xsi:type="xsd:string">UD</prod_line_cd>
+      </multiRef>
+      <multiRef id="id17" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns22:GeoSplit" xmlns:ns22="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <ap_region_pct xsi:type="xsd:double">100.0</ap_region_pct>
+         <eu_region_pct xsi:type="xsd:double">0.0</eu_region_pct>
+         <na_region_pct xsi:type="xsd:double">0.0</na_region_pct>
+         <la_region_pct xsi:type="xsd:double">0.0</la_region_pct>
+         <jp_region_pct xsi:type="xsd:double">0.0</jp_region_pct>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+      </multiRef>
+      <multiRef id="id9" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns23:RolloutSchedule" xmlns:ns23="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</beg_dt>
+         <end_dt xsi:type="xsd:string">31-Mar-2021 00:00</end_dt>
+         <ordr_min_qty xsi:type="xsd:int">700</ordr_min_qty>
+         <line_max_qty xsi:type="xsd:int">10000</line_max_qty>
+         <rslr_max_qty xsi:type="xsd:int">0</rslr_max_qty>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <remaining_qty xsi:type="xsd:int">0</remaining_qty>
+         <ordered_qty xsi:type="xsd:int">1402</ordered_qty>
+         <shipped_qty xsi:type="xsd:int">0</shipped_qty>
+         <rebated_qty xsi:type="xsd:int">0</rebated_qty>
+         <load_type xsi:type="xsd:string">Even</load_type>
+         <monthQtyList soapenc:arrayType="xsd:int[15]" xsi:type="soapenc:Array">
+            <monthQtyList xsi:type="xsd:int">167</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+         </monthQtyList>
+      </multiRef>
+      <multiRef id="id6" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns24:RolloutSchedule" xmlns:ns24="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</beg_dt>
+         <end_dt xsi:type="xsd:string">31-Mar-2021 00:00</end_dt>
+         <ordr_min_qty xsi:type="xsd:int">700</ordr_min_qty>
+         <line_max_qty xsi:type="xsd:int">10000</line_max_qty>
+         <rslr_max_qty xsi:type="xsd:int">0</rslr_max_qty>
+         <est_qty xsi:type="xsd:int">10000</est_qty>
+         <remaining_qty xsi:type="xsd:int">0</remaining_qty>
+         <ordered_qty xsi:type="xsd:int">3402</ordered_qty>
+         <shipped_qty xsi:type="xsd:int">0</shipped_qty>
+         <rebated_qty xsi:type="xsd:int">0</rebated_qty>
+         <load_type xsi:type="xsd:string">Even</load_type>
+         <monthQtyList soapenc:arrayType="xsd:int[15]" xsi:type="soapenc:Array">
+            <monthQtyList xsi:type="xsd:int">167</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1967</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">1966</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+            <monthQtyList xsi:type="xsd:int">0</monthQtyList>
+         </monthQtyList>
+      </multiRef>
+      <multiRef id="id13" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns25:ProductPriceDateRange" xmlns:ns25="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <scale_id xsi:type="xsd:int">1</scale_id>
+         <auth_beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</auth_beg_dt>
+         <auth_end_dt xsi:type="xsd:string">31-Mar-2021 00:00</auth_end_dt>
+         <disc_type_cd xsi:type="xsd:string">B</disc_type_cd>
+         <prod_lst_prc_am xsi:type="xsd:double">365.0</prod_lst_prc_am>
+         <auth_prc_am xsi:type="xsd:double">230.0</auth_prc_am>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <high_rslr_a_sd_pc xsi:type="xsd:double">0.0</high_rslr_a_sd_pc>
+         <bundleComponentList xsi:type="ns26:ArrayOf_tns1_BundleComponent" xsi:nil="true" xmlns:ns26="urn:EWSDealImpl"/>
+         <source_config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <phx_rqst_cust_prc_amt xsi:type="xsd:double">0.0</phx_rqst_cust_prc_amt>
+         <target_adj_disc_pct xsi:type="xsd:double">0.0</target_adj_disc_pct>
+         <min_margin_pct xsi:type="xsd:double">0.0</min_margin_pct>
+         <target_margin_pct xsi:type="xsd:double">0.0</target_margin_pct>
+      </multiRef>
+      <multiRef id="id16" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns27:ProductPriceDateRange" xmlns:ns27="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <scale_id xsi:type="xsd:int">1</scale_id>
+         <auth_beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</auth_beg_dt>
+         <auth_end_dt xsi:type="xsd:string">31-Mar-2021 00:00</auth_end_dt>
+         <disc_type_cd xsi:type="xsd:string">B</disc_type_cd>
+         <prod_lst_prc_am xsi:type="xsd:double">1025.13</prod_lst_prc_am>
+         <auth_prc_am xsi:type="xsd:double">900.0</auth_prc_am>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <high_rslr_a_sd_pc xsi:type="xsd:double">0.0</high_rslr_a_sd_pc>
+         <bundleComponentList soapenc:arrayType="ns27:BundleComponent[25]" xsi:type="soapenc:Array">
+            <bundleComponentList href="#id21"/>
+            <bundleComponentList href="#id22"/>
+            <bundleComponentList href="#id23"/>
+            <bundleComponentList href="#id24"/>
+            <bundleComponentList href="#id25"/>
+            <bundleComponentList href="#id26"/>
+            <bundleComponentList href="#id27"/>
+            <bundleComponentList href="#id28"/>
+            <bundleComponentList href="#id29"/>
+            <bundleComponentList href="#id30"/>
+            <bundleComponentList href="#id31"/>
+            <bundleComponentList href="#id32"/>
+            <bundleComponentList href="#id33"/>
+            <bundleComponentList href="#id34"/>
+            <bundleComponentList href="#id35"/>
+            <bundleComponentList href="#id36"/>
+            <bundleComponentList href="#id37"/>
+            <bundleComponentList href="#id38"/>
+            <bundleComponentList href="#id39"/>
+            <bundleComponentList href="#id40"/>
+            <bundleComponentList href="#id41"/>
+            <bundleComponentList href="#id42"/>
+            <bundleComponentList href="#id43"/>
+            <bundleComponentList href="#id44"/>
+            <bundleComponentList href="#id45"/>
+         </bundleComponentList>
+         <source_config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <phx_rqst_cust_prc_amt xsi:type="xsd:double">0.0</phx_rqst_cust_prc_amt>
+         <target_adj_disc_pct xsi:type="xsd:double">0.0</target_adj_disc_pct>
+         <min_margin_pct xsi:type="xsd:double">0.0</min_margin_pct>
+         <target_margin_pct xsi:type="xsd:double">0.0</target_margin_pct>
+      </multiRef>
+      <multiRef id="id20" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns28:GeoSplit" xmlns:ns28="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <ap_region_pct xsi:type="xsd:double">100.0</ap_region_pct>
+         <eu_region_pct xsi:type="xsd:double">0.0</eu_region_pct>
+         <na_region_pct xsi:type="xsd:double">0.0</na_region_pct>
+         <la_region_pct xsi:type="xsd:double">0.0</la_region_pct>
+         <jp_region_pct xsi:type="xsd:double">0.0</jp_region_pct>
+         <prod_line_cd xsi:type="xsd:string">DU</prod_line_cd>
+      </multiRef>
+      <multiRef id="id11" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns29:GeoSplit" xmlns:ns29="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <ap_region_pct xsi:type="xsd:double">100.0</ap_region_pct>
+         <eu_region_pct xsi:type="xsd:double">0.0</eu_region_pct>
+         <na_region_pct xsi:type="xsd:double">0.0</na_region_pct>
+         <la_region_pct xsi:type="xsd:double">0.0</la_region_pct>
+         <jp_region_pct xsi:type="xsd:double">0.0</jp_region_pct>
+         <prod_line_cd xsi:type="xsd:string">DU</prod_line_cd>
+      </multiRef>
+      <multiRef id="id19" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns30:ProductPriceDateRange" xmlns:ns30="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <scale_id xsi:type="xsd:int">1</scale_id>
+         <auth_beg_dt xsi:type="xsd:string">29-Oct-2020 00:00</auth_beg_dt>
+         <auth_end_dt xsi:type="xsd:string">31-Mar-2021 00:00</auth_end_dt>
+         <disc_type_cd xsi:type="xsd:string">B</disc_type_cd>
+         <prod_lst_prc_am xsi:type="xsd:double">0.0</prod_lst_prc_am>
+         <auth_prc_am xsi:type="xsd:double">0.0</auth_prc_am>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <high_rslr_a_sd_pc xsi:type="xsd:double">0.0</high_rslr_a_sd_pc>
+         <bundleComponentList xsi:type="ns31:ArrayOf_tns1_BundleComponent" xsi:nil="true" xmlns:ns31="urn:EWSDealImpl"/>
+         <source_config_id xsi:type="xsd:string" xsi:nil="true"/>
+         <phx_rqst_cust_prc_amt xsi:type="xsd:double">0.0</phx_rqst_cust_prc_amt>
+         <target_adj_disc_pct xsi:type="xsd:double">0.0</target_adj_disc_pct>
+         <min_margin_pct xsi:type="xsd:double">0.0</min_margin_pct>
+         <target_margin_pct xsi:type="xsd:double">0.0</target_margin_pct>
+      </multiRef>
+      <multiRef id="id31" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns32:BundleComponent" xmlns:ns32="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">11</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS72AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">USB BusSlim Keyboard</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">10.13</list_price>
+         <auth_prc_amt xsi:type="xsd:double">8.89</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">8.89</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">USB BusSlim Keyboard</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id28" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns33:BundleComponent" xmlns:ns33="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">8</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS12AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Intel Core i5- 9500 3.0 6C 65W</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">273.18</list_price>
+         <auth_prc_amt xsi:type="xsd:double">239.83</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">239.83</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Intel Core i5- 9500 3.0 6C 65W</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id26" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns34:BundleComponent" xmlns:ns34="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">6</item_nr>
+         <prod_base_nr xsi:type="xsd:string">4YH35AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">7F</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">OS Localization</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.02</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.02</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.02</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">OS Localization</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id39" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns35:BundleComponent" xmlns:ns35="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">19</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS50AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">HP ProOne G4 G5 AiO Adj Height Stand</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">32.63</list_price>
+         <auth_prc_amt xsi:type="xsd:double">28.65</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">28.65</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP ProOne G4 G5 AiO Adj Height Stand</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id44" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns36:BundleComponent" xmlns:ns36="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">24</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS28AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Intel CFL-R Core i5 Label</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.02</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.02</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.02</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Intel CFL-R Core i5 Label</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id35" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns37:BundleComponent" xmlns:ns37="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">15</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6ER54AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Single Pack AiO 21.5 AH Std Packaging</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">7.19</list_price>
+         <auth_prc_amt xsi:type="xsd:double">6.31</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">6.31</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Single Pack AiO 21.5 AH Std Packaging</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id42" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns38:BundleComponent" xmlns:ns38="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">22</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DQ81AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">HP HDMI Port and no Intel vPro</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">10.75</list_price>
+         <auth_prc_amt xsi:type="xsd:double">9.44</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">9.44</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP HDMI Port and no Intel vPro</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id37" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns39:BundleComponent" xmlns:ns39="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">17</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS53AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Integrated FHD 1080p IR Webcam</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">35.31</list_price>
+         <auth_prc_amt xsi:type="xsd:double">31.0</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">31.0</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Integrated FHD 1080p IR Webcam</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id43" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns40:BundleComponent" xmlns:ns40="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">23</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DR27AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">No Intel vPro</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.02</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.02</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.02</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">No Intel vPro</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id38" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns41:BundleComponent" xmlns:ns41="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">18</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS00AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">120 Watt EPSProOne Ext AiO PwrA</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">17.54</list_price>
+         <auth_prc_amt xsi:type="xsd:double">15.4</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">15.4</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">120 Watt EPSProOne Ext AiO PwrA</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id27" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns42:BundleComponent" xmlns:ns42="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">7</item_nr>
+         <prod_base_nr xsi:type="xsd:string">4YH35AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string">UUF</prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">7F</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Asia Pacific-English Localization</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.0</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.0</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.0</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Asia Pacific-English Localization</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id33" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns43:BundleComponent" xmlns:ns43="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">13</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DR63AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">8GB (1x8GB) DDR4 2666 SODIMM</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">64.59</list_price>
+         <auth_prc_amt xsi:type="xsd:double">56.71</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">56.71</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">8GB (1x8GB) DDR4 2666 SODIMM</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id21" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns44:BundleComponent" xmlns:ns44="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">1</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6AE26AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">HP IDS ProOne 600 G5 21.5 NT AiO PC</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">238.69</list_price>
+         <auth_prc_amt xsi:type="xsd:double">209.56</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">209.56</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP IDS ProOne 600 G5 21.5 NT AiO PC</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id25" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns45:BundleComponent" xmlns:ns45="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">5</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DR48AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Win 10 Pro 64</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">174.73</list_price>
+         <auth_prc_amt xsi:type="xsd:double">153.4</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">153.4</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Win 10 Pro 64</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id32" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns46:BundleComponent" xmlns:ns46="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">12</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS72AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string">UUF</prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">AP Eng localization</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.0</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.0</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.0</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Asia Pacific-English Localization</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id23" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns47:BundleComponent" xmlns:ns47="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">3</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DQ94AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string">UUF</prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">AP Eng localization</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.0</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.0</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.0</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Asia Pacific-English Localization</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id22" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns48:BundleComponent" xmlns:ns48="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">2</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DQ94AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">HP ProOne G5 AiO NT CKIT</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">1.54</list_price>
+         <auth_prc_amt xsi:type="xsd:double">1.35</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">1.35</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP ProOne G5 AiO NT CKIT</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id36" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns49:BundleComponent" xmlns:ns49="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">16</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DQ69AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">AiO Internal Stereo Speakers (2W)</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">3.43</list_price>
+         <auth_prc_amt xsi:type="xsd:double">3.01</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">3.01</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">AiO Internal Stereo Speakers (2W)</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id41" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns50:BundleComponent" xmlns:ns50="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">21</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS62AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string">UUF</prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">AP Eng localization</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.0</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.0</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.0</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Asia Pacific-English Localization</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id40" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns51:BundleComponent" xmlns:ns51="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">20</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS62AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">3/3/3 AiO Warranty NT Warranty</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">21.0</list_price>
+         <auth_prc_amt xsi:type="xsd:double">18.44</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">18.44</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">3/3/3 AiO Warranty NT Warranty</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id24" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns52:BundleComponent" xmlns:ns52="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">4</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6ER62AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">HP ProOne AiO 21.5 NT 65W UMA Chassis</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">54.32</list_price>
+         <auth_prc_amt xsi:type="xsd:double">47.69</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">47.69</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">HP ProOne AiO 21.5 NT 65W UMA Chassis</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id45" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns53:BundleComponent" xmlns:ns53="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">25</item_nr>
+         <prod_base_nr xsi:type="xsd:string">1TK73AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">Certified Skype for Business Label</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">0.05</list_price>
+         <auth_prc_amt xsi:type="xsd:double">0.04</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">0.04</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">Certified Skype for Business Label</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id29" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns54:BundleComponent" xmlns:ns54="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">9</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DR14AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">500GB 7200 2.5</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">56.28</list_price>
+         <auth_prc_amt xsi:type="xsd:double">49.41</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">49.41</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">500GB 7200 2.5</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id34" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns55:BundleComponent" xmlns:ns55="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">14</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DR22AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">MUS WD USB OPT</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">3.02</list_price>
+         <auth_prc_amt xsi:type="xsd:double">2.65</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">2.65</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">MUS WD USB OPT</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+      <multiRef id="id30" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="ns56:BundleComponent" xmlns:ns56="urn:ews-structs" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <item_nr xsi:type="xsd:int">10</item_nr>
+         <prod_base_nr xsi:type="xsd:string">6DS48AV</prod_base_nr>
+         <prod_opt_cd xsi:type="xsd:string"></prod_opt_cd>
+         <prod_line_cd xsi:type="xsd:string">GA</prod_line_cd>
+         <prod_fam_cd xsi:type="xsd:string" xsi:nil="true"/>
+         <prod_desc xsi:type="xsd:string">9.5 DVDWR ProOne AIO G4</prod_desc>
+         <banded_fl xsi:type="xsd:string">N</banded_fl>
+         <future_prod_fl xsi:type="xsd:string">N</future_prod_fl>
+         <qty xsi:type="xsd:int">1</qty>
+         <list_price xsi:type="xsd:double">20.69</list_price>
+         <auth_prc_amt xsi:type="xsd:double">18.16</auth_prc_amt>
+         <auth_disc_ot_pc xsi:type="xsd:double">0.0</auth_disc_ot_pc>
+         <disc_as_pct xsi:type="xsd:double">0.0</disc_as_pct>
+         <extended_price xsi:type="xsd:double">18.16</extended_price>
+         <comp_level xsi:type="xsd:int">0</comp_level>
+         <error_id xsi:type="xsd:int">0</error_id>
+         <long_prod_desc xsi:type="xsd:string">9.5 DVDWR ProOne AIO G4</long_prod_desc>
+         <spcl_config_fl xsi:type="xsd:string">N</spcl_config_fl>
+      </multiRef>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,25 @@
+Request
+========
+
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://server.ews.hp.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:login soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <version xsi:type="xsd:string">73</version>
+         <user xsi:type="xsd:string">karthick</user>
+         <password xsi:type="xsd:string">karthick</password>
+      </ser:login>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Response
+===========
+
+
+<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:loginResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://server.ews.hp.com"><loginReturn xsi:type="xsd:string">562472733028</loginReturn></ns1:loginResponse></soapenv:Body></soapenv:Envelope>
+
+
+
+
+
+
