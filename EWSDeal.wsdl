@@ -2,23 +2,7 @@
 <wsdl:definitions targetNamespace="urn:EWSDealImpl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:EWSDealImpl" xmlns:intf="urn:EWSDealImpl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://util.ews.hp.com" xmlns:tns2="http://server.ews.hp.com" xmlns:tns3="urn:ews-structs" xmlns:tns4="http://beans.bd.ews.hp.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!--WSDL created by Apache Axis version: 1.4
 Built on Mar 26, 2009 (06:16:33 PDT)-->
- <wsdl:types>
-  <schema targetNamespace="http://util.ews.hp.com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <import namespace="urn:ews-structs"/>
-   <import namespace="urn:EWSDealImpl"/>
-   <import namespace="http://server.ews.hp.com"/>
-   <import namespace="http://beans.bd.ews.hp.com"/>
-   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
-   <complexType name="BusinessRuleException">
-    <sequence/>
-   </complexType>
-   <complexType name="ThrottleException">
-    <sequence/>
-   </complexType>
-  </schema>
-  <schema targetNamespace="http://server.ews.hp.com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <import namespace="http://util.ews.hp.com"/>
-   <import namespace="urn:ews-structs"/>
+ space="urn:ews-structs"/>
    <import namespace="urn:EWSDealImpl"/>
    <import namespace="http://beans.bd.ews.hp.com"/>
    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
