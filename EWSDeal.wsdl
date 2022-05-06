@@ -1,0 +1,3781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:EWSDealImpl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:EWSDealImpl" xmlns:intf="urn:EWSDealImpl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://util.ews.hp.com" xmlns:tns2="http://server.ews.hp.com" xmlns:tns3="urn:ews-structs" xmlns:tns4="http://beans.bd.ews.hp.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Mar 26, 2009 (06:16:33 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://util.ews.hp.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="urn:ews-structs"/>
+   <import namespace="urn:EWSDealImpl"/>
+   <import namespace="http://server.ews.hp.com"/>
+   <import namespace="http://beans.bd.ews.hp.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="BusinessRuleException">
+    <sequence/>
+   </complexType>
+   <complexType name="ThrottleException">
+    <sequence/>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://server.ews.hp.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.ews.hp.com"/>
+   <import namespace="urn:ews-structs"/>
+   <import namespace="urn:EWSDealImpl"/>
+   <import namespace="http://beans.bd.ews.hp.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ServerException">
+    <sequence/>
+   </complexType>
+  </schema>
+  <schema targetNamespace="urn:EWSDealImpl" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.ews.hp.com"/>
+   <import namespace="urn:ews-structs"/>
+   <import namespace="http://server.ews.hp.com"/>
+   <import namespace="http://beans.bd.ews.hp.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_Affiliate">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:Affiliate[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_Comment">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:Comment[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_Competitor">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:Competitor[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_MultiCountry">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:MultiCountry[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_xsd_int">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:int[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_Reseller">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:Reseller[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_ResellerAudience">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:ResellerAudience[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_SalesIncentive">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:SalesIncentive[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_BundleComponent">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:BundleComponent[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_ProductPriceDateRange">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:ProductPriceDateRange[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_ProductPriceLine">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:ProductPriceLine[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_xsd_long">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:long[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns4_AirQuantity">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns4:AirQuantity[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_RemainingQuantity">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:RemainingQuantity[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_Region">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:Region[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns3_RemainingQuantities">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:RemainingQuantities[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_CRMCustomer">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:CRMCustomer[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_ExtendedBundleComponent">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:ExtendedBundleComponent[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_ExtendedProductPriceDateRange">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:ExtendedProductPriceDateRange[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_ExtendedProductPriceLine">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:ExtendedProductPriceLine[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_GLPBundleComponent">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:GLPBundleComponent[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_GLPProductPriceDateRange">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:GLPProductPriceDateRange[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_tns1_GLPProductPriceLine">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="tns3:GLPProductPriceLine[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="urn:ews-structs" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.ews.hp.com"/>
+   <import namespace="urn:EWSDealImpl"/>
+   <import namespace="http://server.ews.hp.com"/>
+   <import namespace="http://beans.bd.ews.hp.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Affiliate">
+    <sequence>
+     <element name="presales_cust_id" nillable="true" type="xsd:string"/>
+     <element name="crs_id" nillable="true" type="xsd:string"/>
+     <element name="cisys_id" nillable="true" type="xsd:string"/>
+     <element name="euc_nr" nillable="true" type="xsd:string"/>
+     <element name="euc_duns_nr" nillable="true" type="xsd:string"/>
+     <element name="eu_auth_affil_nr" type="xsd:int"/>
+     <element name="eu_auth_affil_nm" nillable="true" type="xsd:string"/>
+     <element name="euc_lang_cd" nillable="true" type="xsd:string"/>
+     <element name="euc_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="region_cd" nillable="true" type="xsd:string"/>
+     <element name="street_addr" nillable="true" type="xsd:string"/>
+     <element name="euc_city_nm" nillable="true" type="xsd:string"/>
+     <element name="euc_st_prov_cd" nillable="true" type="xsd:string"/>
+     <element name="iso_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="postal_cd" nillable="true" type="xsd:string"/>
+     <element name="post_box_nr" nillable="true" type="xsd:string"/>
+     <element name="org_id" nillable="true" type="xsd:string"/>
+     <element name="ec_otrprtysite_id" nillable="true" type="xsd:string"/>
+     <element name="ec_otrprtysite_instid" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Comment">
+    <sequence>
+     <element name="cmnt_extrn_fl" nillable="true" type="xsd:string"/>
+     <element name="cmnt_text_memo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Competitor">
+    <sequence>
+     <element name="comp_nm" nillable="true" type="xsd:string"/>
+     <element name="eu_price" nillable="true" type="xsd:double"/>
+     <element name="est_tot_markup" nillable="true" type="xsd:int"/>
+     <element name="prod_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_tx" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="res_b_cost" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="CRMCustomer">
+    <sequence>
+     <element name="active_fl" nillable="true" type="xsd:string"/>
+     <element name="building_nm" nillable="true" type="xsd:string"/>
+     <element name="cid_site_id" nillable="true" type="xsd:string"/>
+     <element name="cisys_id" nillable="true" type="xsd:string"/>
+     <element name="euc_city_nm" nillable="true" type="xsd:string"/>
+     <element name="euc_cmpny_nm" nillable="true" type="xsd:string"/>
+     <element name="euc_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="euc_duns_nr" nillable="true" type="xsd:string"/>
+     <element name="euc_fam_nm" nillable="true" type="xsd:string"/>
+     <element name="euc_nr" nillable="true" type="xsd:string"/>
+     <element name="euc_st_prov_cd" nillable="true" type="xsd:string"/>
+     <element name="iso_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="postal_cd" nillable="true" type="xsd:string"/>
+     <element name="post_box_nr" nillable="true" type="xsd:string"/>
+     <element name="presales_cust_id" nillable="true" type="xsd:string"/>
+     <element name="presales_source" nillable="true" type="xsd:string"/>
+     <element name="region_cd" nillable="true" type="xsd:string"/>
+     <element name="crs_id" nillable="true" type="xsd:string"/>
+     <element name="sic_ind_code" nillable="true" type="xsd:string"/>
+     <element name="street_addr" nillable="true" type="xsd:string"/>
+     <element name="update_dts" nillable="true" type="xsd:string"/>
+     <element name="duns_domestic_ultimate_id" nillable="true" type="xsd:string"/>
+     <element name="duns_domestic_ultimate_nm" nillable="true" type="xsd:string"/>
+     <element name="duns_global_ultimate_id" nillable="true" type="xsd:string"/>
+     <element name="duns_global_ultimate_nm" nillable="true" type="xsd:string"/>
+     <element name="amid_cntry_account_id" nillable="true" type="xsd:string"/>
+     <element name="amid_cntry_account_nm" nillable="true" type="xsd:string"/>
+     <element name="amid_global_sub_account_id" nillable="true" type="xsd:string"/>
+     <element name="amid_global_sub_account_nm" nillable="true" type="xsd:string"/>
+     <element name="amid_global_account_id" nillable="true" type="xsd:string"/>
+     <element name="amid_global_account_nm" nillable="true" type="xsd:string"/>
+     <element name="global_account_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_segment" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="price_profile_desc" nillable="true" type="xsd:string"/>
+     <element name="cid_sub_site_id" nillable="true" type="xsd:string"/>
+     <element name="euc_lang_cd" nillable="true" type="xsd:string"/>
+     <element name="org_id" nillable="true" type="xsd:string"/>
+     <element name="ec_otrprtysite_id" nillable="true" type="xsd:string"/>
+     <element name="ec_otrprtysite_instid" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="MultiCountry">
+    <sequence>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="currency_cd" nillable="true" type="xsd:string"/>
+     <element name="price_conversion_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Reseller">
+    <sequence>
+     <element name="company_id" nillable="true" type="xsd:string"/>
+     <element name="contractList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="cust_base_nr" nillable="true" type="xsd:string"/>
+     <element name="cust_name" nillable="true" type="xsd:string"/>
+     <element name="dvp_rslr_pct" nillable="true" type="xsd:double"/>
+     <element name="icn" nillable="true" type="xsd:string"/>
+     <element name="location_id" nillable="true" type="xsd:string"/>
+     <element name="outlet_id" nillable="true" type="xsd:long"/>
+     <element name="ppro_id" nillable="true" type="xsd:string"/>
+     <element name="rslr_addr" nillable="true" type="xsd:string"/>
+     <element name="rslr_city_nm" nillable="true" type="xsd:string"/>
+     <element name="rslr_st_prov_cd" nillable="true" type="xsd:string"/>
+     <element name="rslr_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="rslr_zip_cd" nillable="true" type="xsd:string"/>
+     <element name="rslr_duns_nr" nillable="true" type="xsd:string"/>
+     <element name="vat_nr" nillable="true" type="xsd:string"/>
+     <element name="ptnr_cmpny_id" nillable="true" type="xsd:string"/>
+     <element name="contract_type" nillable="true" type="xsd:string"/>
+     <element name="buyer_type" nillable="true" type="xsd:string"/>
+     <element name="spl_prc_eligibility_fl" nillable="true" type="xsd:string"/>
+     <element name="rslr_ab" nillable="true" type="xsd:string"/>
+     <element name="contract_id" nillable="true" type="xsd:string"/>
+     <element name="excludedPLList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ResellerAudience">
+    <sequence>
+     <element name="company_id" nillable="true" type="xsd:string"/>
+     <element name="cust_base_nr" nillable="true" type="xsd:string"/>
+     <element name="cust_name" nillable="true" type="xsd:string"/>
+     <element name="icn" nillable="true" type="xsd:string"/>
+     <element name="location_id" nillable="true" type="xsd:string"/>
+     <element name="outlet_id" nillable="true" type="xsd:long"/>
+     <element name="ppro_id" nillable="true" type="xsd:string"/>
+     <element name="rslr_addr" nillable="true" type="xsd:string"/>
+     <element name="rslr_city_nm" nillable="true" type="xsd:string"/>
+     <element name="rslr_st_prov_cd" nillable="true" type="xsd:string"/>
+     <element name="rslr_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="rslr_zip_cd" nillable="true" type="xsd:string"/>
+     <element name="vat_nr" nillable="true" type="xsd:string"/>
+     <element name="ptnr_cmpny_id" nillable="true" type="xsd:string"/>
+     <element name="spl_prc_eligibility_fl" nillable="true" type="xsd:string"/>
+     <element name="rslr_ab" nillable="true" type="xsd:string"/>
+     <element name="view_fl" nillable="true" type="xsd:string"/>
+     <element name="use_fl" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="SalesIncentive">
+    <sequence>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="sales_incentive_pct" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="DealHeader">
+    <sequence>
+     <element name="agent_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="attach_fl" nillable="true" type="xsd:string"/>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="catalog_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="comment_fl" nillable="true" type="xsd:string"/>
+     <element name="complex_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="crm_id" nillable="true" type="xsd:string"/>
+     <element name="crm_opp_nr" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="cust_sat_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_seg_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="deal_lead_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="deliver_by_dt" nillable="true" type="xsd:string"/>
+     <element name="driving_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="dsm_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="est_deal_value" nillable="true" type="xsd:long"/>
+     <element name="euc_rfp_nr" nillable="true" type="xsd:string"/>
+     <element name="industry_nm" nillable="true" type="xsd:string"/>
+     <element name="init_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="intl_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="lang_cd" nillable="true" type="xsd:string"/>
+     <element name="mc_charge" nillable="true" type="xsd:string"/>
+     <element name="non_standard_tc_fl" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="order_bgn_dt" nillable="true" type="xsd:string"/>
+     <element name="order_end_dt" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_cd" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_days" nillable="true" type="xsd:int"/>
+     <element name="prc_pro_rqrd_fl" nillable="true" type="xsd:string"/>
+     <element name="price_auto_apply_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="promotion_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="quote_distrib_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_end_dt" nillable="true" type="xsd:string"/>
+     <element name="supplies_only_fl" nillable="true" type="xsd:string"/>
+     <element name="w_l_prob" nillable="true" type="xsd:double"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+     <element name="drop_ship_fl" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="affiliateList" nillable="true" type="impl:ArrayOf_tns1_Affiliate"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="competitorList" nillable="true" type="impl:ArrayOf_tns1_Competitor"/>
+     <element name="customer" nillable="true" type="tns3:CRMCustomer"/>
+     <element name="multiCountryList" nillable="true" type="impl:ArrayOf_tns1_MultiCountry"/>
+     <element name="othersAuthList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="resellerAList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerBList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerAAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="resellerBAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="salesIncentiveList" nillable="true" type="impl:ArrayOf_tns1_SalesIncentive"/>
+     <element name="salesRepList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="sap_quote_id" nillable="true" type="xsd:string"/>
+     <element name="system_id" nillable="true" type="xsd:string"/>
+     <element name="request_id" nillable="true" type="xsd:string"/>
+     <element name="deal_type_desc" nillable="true" type="xsd:string"/>
+     <element name="deal_type_cd" nillable="true" type="xsd:long"/>
+     <element name="single_cmpny_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="tier_level" nillable="true" type="xsd:string"/>
+     <element name="tier_name" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RolloutSchedule">
+    <sequence>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="ordr_min_qty" type="xsd:int"/>
+     <element name="line_max_qty" type="xsd:int"/>
+     <element name="rslr_max_qty" type="xsd:int"/>
+     <element name="est_qty" type="xsd:int"/>
+     <element name="remaining_qty" type="xsd:int"/>
+     <element name="ordered_qty" type="xsd:int"/>
+     <element name="shipped_qty" type="xsd:int"/>
+     <element name="rebated_qty" type="xsd:int"/>
+     <element name="load_type" nillable="true" type="xsd:string"/>
+     <element name="monthQtyList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+    </sequence>
+   </complexType>
+   <complexType name="BundleComponent">
+    <sequence>
+     <element name="item_nr" type="xsd:int"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_desc" nillable="true" type="xsd:string"/>
+     <element name="banded_fl" nillable="true" type="xsd:string"/>
+     <element name="future_prod_fl" nillable="true" type="xsd:string"/>
+     <element name="qty" nillable="true" type="xsd:int"/>
+     <element name="list_price" nillable="true" type="xsd:double"/>
+     <element name="auth_prc_amt" nillable="true" type="xsd:double"/>
+     <element name="auth_disc_ot_pc" nillable="true" type="xsd:double"/>
+     <element name="disc_as_pct" nillable="true" type="xsd:double"/>
+     <element name="extended_price" nillable="true" type="xsd:double"/>
+     <element name="comp_level" nillable="true" type="xsd:int"/>
+     <element name="error_id" type="xsd:int"/>
+     <element name="long_prod_desc" nillable="true" type="xsd:string"/>
+     <element name="spcl_config_fl" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProductPriceDateRange">
+    <sequence>
+     <element name="scale_id" type="xsd:int"/>
+     <element name="auth_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="auth_end_dt" nillable="true" type="xsd:string"/>
+     <element name="disc_type_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_lst_prc_am" type="xsd:double"/>
+     <element name="auth_prc_am" type="xsd:double"/>
+     <element name="auth_disc_ot_pc" type="xsd:double"/>
+     <element name="high_rslr_a_sd_pc" type="xsd:double"/>
+     <element name="bundleComponentList" nillable="true" type="impl:ArrayOf_tns1_BundleComponent"/>
+     <element name="source_config_id" nillable="true" type="xsd:string"/>
+     <element name="phx_rqst_cust_prc_amt" nillable="true" type="xsd:double"/>
+     <element name="target_adj_disc_pct" nillable="true" type="xsd:double"/>
+     <element name="min_margin_pct" nillable="true" type="xsd:double"/>
+     <element name="target_margin_pct" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="GeoSplit">
+    <sequence>
+     <element name="ap_region_pct" nillable="true" type="xsd:double"/>
+     <element name="eu_region_pct" nillable="true" type="xsd:double"/>
+     <element name="na_region_pct" nillable="true" type="xsd:double"/>
+     <element name="la_region_pct" nillable="true" type="xsd:double"/>
+     <element name="jp_region_pct" nillable="true" type="xsd:double"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProductPriceLine">
+    <sequence>
+     <element name="line_nr" type="xsd:int"/>
+     <element name="line_type_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_desc" nillable="true" type="xsd:string"/>
+     <element name="est_qty" nillable="true" type="xsd:int"/>
+     <element name="est_value" type="xsd:long"/>
+     <element name="fsm_key" nillable="true" type="xsd:string"/>
+     <element name="fsm_type" nillable="true" type="xsd:string"/>
+     <element name="fsm_family_cd" nillable="true" type="xsd:string"/>
+     <element name="fsm_series_cd" nillable="true" type="xsd:string"/>
+     <element name="fsm_model_cd" nillable="true" type="xsd:string"/>
+     <element name="rollout" nillable="true" type="tns3:RolloutSchedule"/>
+     <element name="future_prod_fl" nillable="true" type="xsd:string"/>
+     <element name="use_low_prc_fl" nillable="true" type="xsd:string"/>
+     <element name="disp_comp_pr_fl" nillable="true" type="xsd:string"/>
+     <element name="max_qty_reached_fl" nillable="true" type="xsd:string"/>
+     <element name="max_qty_reached_date" nillable="true" type="xsd:string"/>
+     <element name="config_id" nillable="true" type="xsd:string"/>
+     <element name="config_src" nillable="true" type="xsd:string"/>
+     <element name="spcl_config_fl" nillable="true" type="xsd:string"/>
+     <element name="productPriceDateRangeList" nillable="true" type="impl:ArrayOf_tns1_ProductPriceDateRange"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="error_id" type="xsd:int"/>
+     <element name="long_prod_desc" nillable="true" type="xsd:string"/>
+     <element name="geoSplit" nillable="true" type="tns3:GeoSplit"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProductPriceLines">
+    <sequence>
+     <element name="bd_nr" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="productPriceLineList" nillable="true" type="impl:ArrayOf_tns1_ProductPriceLine"/>
+    </sequence>
+   </complexType>
+   <complexType name="ActionResult">
+    <sequence>
+     <element name="nr" nillable="true" type="xsd:long"/>
+     <element name="str" nillable="true" type="xsd:string"/>
+     <element name="resultCode" type="xsd:int"/>
+     <element name="messageList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TCDealHeader">
+    <sequence>
+     <element name="agent_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="attach_fl" nillable="true" type="xsd:string"/>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="catalog_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="comment_fl" nillable="true" type="xsd:string"/>
+     <element name="complex_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="crm_id" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="cust_sat_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_seg_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="deal_lead_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="deliver_by_dt" nillable="true" type="xsd:string"/>
+     <element name="driving_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="dsm_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="est_deal_value" nillable="true" type="xsd:long"/>
+     <element name="euc_rfp_nr" nillable="true" type="xsd:string"/>
+     <element name="industry_nm" nillable="true" type="xsd:string"/>
+     <element name="init_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="intl_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="lang_cd" nillable="true" type="xsd:string"/>
+     <element name="mc_charge" nillable="true" type="xsd:string"/>
+     <element name="non_standard_tc_fl" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="order_bgn_dt" nillable="true" type="xsd:string"/>
+     <element name="order_end_dt" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_cd" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_days" nillable="true" type="xsd:int"/>
+     <element name="prc_pro_rqrd_fl" nillable="true" type="xsd:string"/>
+     <element name="price_auto_apply_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="promotion_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="quote_distrib_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_end_dt" nillable="true" type="xsd:string"/>
+     <element name="supplies_only_fl" nillable="true" type="xsd:string"/>
+     <element name="w_l_prob" nillable="true" type="xsd:double"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+     <element name="drop_ship_fl" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="affiliateList" nillable="true" type="impl:ArrayOf_tns1_Affiliate"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="competitorList" nillable="true" type="impl:ArrayOf_tns1_Competitor"/>
+     <element name="customer" nillable="true" type="tns3:CRMCustomer"/>
+     <element name="multiCountryList" nillable="true" type="impl:ArrayOf_tns1_MultiCountry"/>
+     <element name="othersAuthList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="resellerAList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerBList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerAAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="resellerBAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="salesIncentiveList" nillable="true" type="impl:ArrayOf_tns1_SalesIncentive"/>
+     <element name="salesRepList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="sap_quote_id" nillable="true" type="xsd:string"/>
+     <element name="system_id" nillable="true" type="xsd:string"/>
+     <element name="request_id" nillable="true" type="xsd:string"/>
+     <element name="deal_type_desc" nillable="true" type="xsd:string"/>
+     <element name="deal_type_cd" nillable="true" type="xsd:long"/>
+     <element name="single_cmpny_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="tier_level" nillable="true" type="xsd:string"/>
+     <element name="tier_name" nillable="true" type="xsd:string"/>
+     <element name="tenantCode" nillable="true" type="xsd:string"/>
+     <element name="mixedTenantCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="DealNrInputParams">
+    <sequence>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="eu_cid" nillable="true" type="xsd:string"/>
+     <element name="eu_cust_nr" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="range_from_dt" nillable="true" type="xsd:string"/>
+     <element name="range_to_dt" nillable="true" type="xsd:string"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="DealNrInputParamsWithTruncFlag">
+    <sequence>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="eu_cid" nillable="true" type="xsd:string"/>
+     <element name="eu_cust_nr" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="range_from_dt" nillable="true" type="xsd:string"/>
+     <element name="range_to_dt" nillable="true" type="xsd:string"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GlobalActivityParams">
+    <sequence>
+     <element name="event_nm" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="assoc_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="range_from_dt" nillable="true" type="xsd:string"/>
+     <element name="range_to_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="eu_cid" nillable="true" type="xsd:string"/>
+     <element name="eu_cust_nr" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GlobalActivityHPFParams">
+    <sequence>
+     <element name="event_nm" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="assoc_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="range_from_dt" nillable="true" type="xsd:string"/>
+     <element name="range_to_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="eu_cid" nillable="true" type="xsd:string"/>
+     <element name="eu_cust_nr" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProductPriceListParams">
+    <sequence>
+     <element name="deal_nr" type="xsd:long"/>
+     <element name="line_nrs" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="line_type_cds" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="config_ids" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="prod_nrs" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="prod_opt_cds" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="shopping_fl" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProductPriceListGlobalParams">
+    <sequence>
+     <element name="deal_nr" type="xsd:long"/>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="line_nrs" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="line_type_cds" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="config_ids" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="prod_nrs" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="prod_opt_cds" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="shopping_fl" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ProductPriceListGlobalByDateParams">
+    <sequence>
+     <element name="deal_nr" type="xsd:long"/>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="line_nrs" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="line_type_cds" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="config_ids" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="prod_nrs" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="prod_opt_cds" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="shopping_fl" nillable="true" type="xsd:string"/>
+     <element name="date_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RemQtyInputParams">
+    <sequence>
+     <element name="dealNr" type="xsd:long"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="line_type_cd" nillable="true" type="xsd:string"/>
+     <element name="config_id" nillable="true" type="xsd:string"/>
+     <element name="use_prod" type="xsd:string"/>
+     <element name="line_nr" nillable="true" type="impl:ArrayOf_xsd_int"/>
+    </sequence>
+   </complexType>
+   <complexType name="RemainingQuantity">
+    <sequence>
+     <element name="line_nr" type="xsd:int"/>
+     <element name="remaining_qty" type="xsd:long"/>
+     <element name="remaining_value" type="xsd:double"/>
+     <element name="remaining_threshold_qty" type="xsd:long"/>
+     <element name="remaining_qty_dt" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Region">
+    <sequence>
+     <element name="region_name" nillable="true" type="xsd:string"/>
+     <element name="RemainingQuantityList" nillable="true" type="impl:ArrayOf_tns1_RemainingQuantity"/>
+    </sequence>
+   </complexType>
+   <complexType name="RemainingQuantities">
+    <sequence>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="airQuantityList" nillable="true" type="impl:ArrayOf_tns4_AirQuantity"/>
+     <element name="regionList" nillable="true" type="impl:ArrayOf_tns1_Region"/>
+    </sequence>
+   </complexType>
+   <complexType name="RemainingQuantitiesHistory">
+    <sequence>
+     <element name="bd_nr" type="xsd:long"/>
+     <element name="RemainingQuantitiesList" nillable="true" type="impl:ArrayOf_tns3_RemainingQuantities"/>
+    </sequence>
+   </complexType>
+   <complexType name="ExtendedDealHeader">
+    <sequence>
+     <element name="agent_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="attach_fl" nillable="true" type="xsd:string"/>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="catalog_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="comment_fl" nillable="true" type="xsd:string"/>
+     <element name="complex_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="crm_id" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="cust_sat_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_seg_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="deal_lead_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="deliver_by_dt" nillable="true" type="xsd:string"/>
+     <element name="driving_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="dsm_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="est_deal_value" nillable="true" type="xsd:long"/>
+     <element name="euc_rfp_nr" nillable="true" type="xsd:string"/>
+     <element name="industry_nm" nillable="true" type="xsd:string"/>
+     <element name="init_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="intl_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="lang_cd" nillable="true" type="xsd:string"/>
+     <element name="mc_charge" nillable="true" type="xsd:string"/>
+     <element name="non_standard_tc_fl" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="order_bgn_dt" nillable="true" type="xsd:string"/>
+     <element name="order_end_dt" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_cd" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_days" nillable="true" type="xsd:int"/>
+     <element name="prc_pro_rqrd_fl" nillable="true" type="xsd:string"/>
+     <element name="price_auto_apply_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="promotion_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="quote_distrib_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_end_dt" nillable="true" type="xsd:string"/>
+     <element name="supplies_only_fl" nillable="true" type="xsd:string"/>
+     <element name="w_l_prob" nillable="true" type="xsd:double"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+     <element name="drop_ship_fl" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="affiliateList" nillable="true" type="impl:ArrayOf_tns1_Affiliate"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="competitorList" nillable="true" type="impl:ArrayOf_tns1_Competitor"/>
+     <element name="customer" nillable="true" type="tns3:CRMCustomer"/>
+     <element name="multiCountryList" nillable="true" type="impl:ArrayOf_tns1_MultiCountry"/>
+     <element name="othersAuthList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="resellerAList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerBList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerAAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="resellerBAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="salesIncentiveList" nillable="true" type="impl:ArrayOf_tns1_SalesIncentive"/>
+     <element name="salesRepList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="sap_quote_id" nillable="true" type="xsd:string"/>
+     <element name="system_id" nillable="true" type="xsd:string"/>
+     <element name="request_id" nillable="true" type="xsd:string"/>
+     <element name="deal_type_desc" nillable="true" type="xsd:string"/>
+     <element name="deal_type_cd" nillable="true" type="xsd:long"/>
+     <element name="single_cmpny_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_source_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_source_keyval" nillable="true" type="xsd:string"/>
+     <element name="deal_source_deal_type" nillable="true" type="xsd:string"/>
+     <element name="creation_dts" nillable="true" type="xsd:string"/>
+     <element name="deal_risk_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_prog_cd" nillable="true" type="xsd:string"/>
+     <element name="BDME_aprvl_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_cd" nillable="true" type="xsd:string"/>
+     <element name="tier_level" nillable="true" type="xsd:string"/>
+     <element name="tier_name" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ExtendedBundleComponent">
+    <sequence>
+     <element name="item_nr" type="xsd:int"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_desc" nillable="true" type="xsd:string"/>
+     <element name="banded_fl" nillable="true" type="xsd:string"/>
+     <element name="future_prod_fl" nillable="true" type="xsd:string"/>
+     <element name="qty" nillable="true" type="xsd:int"/>
+     <element name="list_price" nillable="true" type="xsd:double"/>
+     <element name="auth_prc_amt" nillable="true" type="xsd:double"/>
+     <element name="auth_disc_ot_pc" nillable="true" type="xsd:double"/>
+     <element name="disc_as_pct" nillable="true" type="xsd:double"/>
+     <element name="extended_price" nillable="true" type="xsd:double"/>
+     <element name="comp_level" nillable="true" type="xsd:int"/>
+     <element name="error_id" type="xsd:int"/>
+     <element name="long_prod_desc" nillable="true" type="xsd:string"/>
+     <element name="spcl_config_fl" nillable="true" type="xsd:string"/>
+     <element name="auth_mc_hp_emp_nr" nillable="true" type="xsd:long"/>
+     <element name="auth_basis_text" nillable="true" type="xsd:string"/>
+     <element name="auth_generic_emp_nr" nillable="true" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="ExtendedProductPriceDateRange">
+    <sequence>
+     <element name="scale_id" type="xsd:int"/>
+     <element name="auth_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="auth_end_dt" nillable="true" type="xsd:string"/>
+     <element name="disc_type_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_lst_prc_am" type="xsd:double"/>
+     <element name="auth_prc_am" type="xsd:double"/>
+     <element name="auth_disc_ot_pc" type="xsd:double"/>
+     <element name="high_rslr_a_sd_pc" type="xsd:double"/>
+     <element name="extendedBundleComponentList" nillable="true" type="impl:ArrayOf_tns1_ExtendedBundleComponent"/>
+     <element name="source_config_id" nillable="true" type="xsd:string"/>
+     <element name="phx_rqst_cust_prc_amt" nillable="true" type="xsd:double"/>
+     <element name="target_adj_disc_pct" nillable="true" type="xsd:double"/>
+     <element name="min_margin_pct" nillable="true" type="xsd:double"/>
+     <element name="target_margin_pct" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="ExtendedProductPriceLine">
+    <sequence>
+     <element name="line_nr" type="xsd:int"/>
+     <element name="line_type_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_desc" nillable="true" type="xsd:string"/>
+     <element name="est_qty" nillable="true" type="xsd:int"/>
+     <element name="est_value" type="xsd:long"/>
+     <element name="fsm_key" nillable="true" type="xsd:string"/>
+     <element name="fsm_type" nillable="true" type="xsd:string"/>
+     <element name="fsm_family_cd" nillable="true" type="xsd:string"/>
+     <element name="fsm_series_cd" nillable="true" type="xsd:string"/>
+     <element name="fsm_model_cd" nillable="true" type="xsd:string"/>
+     <element name="rollout" nillable="true" type="tns3:RolloutSchedule"/>
+     <element name="future_prod_fl" nillable="true" type="xsd:string"/>
+     <element name="use_low_prc_fl" nillable="true" type="xsd:string"/>
+     <element name="disp_comp_pr_fl" nillable="true" type="xsd:string"/>
+     <element name="max_qty_reached_fl" nillable="true" type="xsd:string"/>
+     <element name="max_qty_reached_date" nillable="true" type="xsd:string"/>
+     <element name="config_id" nillable="true" type="xsd:string"/>
+     <element name="config_src" nillable="true" type="xsd:string"/>
+     <element name="spcl_config_fl" nillable="true" type="xsd:string"/>
+     <element name="extendedProductPriceDateRangeList" nillable="true" type="impl:ArrayOf_tns1_ExtendedProductPriceDateRange"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="error_id" type="xsd:int"/>
+     <element name="long_prod_desc" nillable="true" type="xsd:string"/>
+     <element name="geoSplit" nillable="true" type="tns3:GeoSplit"/>
+     <element name="auth_mc_hp_emp_nr" nillable="true" type="xsd:long"/>
+     <element name="auth_basis_text" nillable="true" type="xsd:string"/>
+     <element name="auth_generic_emp_nr" nillable="true" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="ExtendedProductPriceLines">
+    <sequence>
+     <element name="bd_nr" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="extendedProductPriceLineList" nillable="true" type="impl:ArrayOf_tns1_ExtendedProductPriceLine"/>
+    </sequence>
+   </complexType>
+   <complexType name="globalActivityHPIParams">
+    <sequence>
+     <element name="event_nm" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="assoc_cntry_cdList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="range_from_dt" nillable="true" type="xsd:string"/>
+     <element name="range_to_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="eu_cid" nillable="true" type="xsd:string"/>
+     <element name="eu_cust_nr" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GLPDealHeader">
+    <sequence>
+     <element name="agent_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="attach_fl" nillable="true" type="xsd:string"/>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="catalog_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="comment_fl" nillable="true" type="xsd:string"/>
+     <element name="complex_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="crm_id" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="cust_sat_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_seg_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="deal_lead_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="deliver_by_dt" nillable="true" type="xsd:string"/>
+     <element name="driving_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="dsm_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="est_deal_value" nillable="true" type="xsd:long"/>
+     <element name="euc_rfp_nr" nillable="true" type="xsd:string"/>
+     <element name="industry_nm" nillable="true" type="xsd:string"/>
+     <element name="init_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="intl_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="lang_cd" nillable="true" type="xsd:string"/>
+     <element name="mc_charge" nillable="true" type="xsd:string"/>
+     <element name="non_standard_tc_fl" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="order_bgn_dt" nillable="true" type="xsd:string"/>
+     <element name="order_end_dt" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_cd" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_days" nillable="true" type="xsd:int"/>
+     <element name="prc_pro_rqrd_fl" nillable="true" type="xsd:string"/>
+     <element name="price_auto_apply_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="promotion_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="quote_distrib_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_end_dt" nillable="true" type="xsd:string"/>
+     <element name="supplies_only_fl" nillable="true" type="xsd:string"/>
+     <element name="w_l_prob" nillable="true" type="xsd:double"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+     <element name="drop_ship_fl" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="affiliateList" nillable="true" type="impl:ArrayOf_tns1_Affiliate"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="competitorList" nillable="true" type="impl:ArrayOf_tns1_Competitor"/>
+     <element name="customer" nillable="true" type="tns3:CRMCustomer"/>
+     <element name="multiCountryList" nillable="true" type="impl:ArrayOf_tns1_MultiCountry"/>
+     <element name="othersAuthList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="resellerAList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerBList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerAAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="resellerBAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="salesIncentiveList" nillable="true" type="impl:ArrayOf_tns1_SalesIncentive"/>
+     <element name="salesRepList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="sap_quote_id" nillable="true" type="xsd:string"/>
+     <element name="system_id" nillable="true" type="xsd:string"/>
+     <element name="request_id" nillable="true" type="xsd:string"/>
+     <element name="deal_type_desc" nillable="true" type="xsd:string"/>
+     <element name="deal_type_cd" nillable="true" type="xsd:long"/>
+     <element name="single_cmpny_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_source_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_source_keyval" nillable="true" type="xsd:string"/>
+     <element name="deal_source_deal_type" nillable="true" type="xsd:string"/>
+     <element name="creation_dts" nillable="true" type="xsd:string"/>
+     <element name="deal_risk_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_prog_cd" nillable="true" type="xsd:string"/>
+     <element name="BDME_aprvl_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_cd" nillable="true" type="xsd:string"/>
+     <element name="tier_level" nillable="true" type="xsd:string"/>
+     <element name="tier_name" nillable="true" type="xsd:string"/>
+     <element name="glp_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="total_addtl_disc_fl" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="GLPBundleComponent">
+    <sequence>
+     <element name="item_nr" type="xsd:int"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_desc" nillable="true" type="xsd:string"/>
+     <element name="banded_fl" nillable="true" type="xsd:string"/>
+     <element name="future_prod_fl" nillable="true" type="xsd:string"/>
+     <element name="qty" nillable="true" type="xsd:int"/>
+     <element name="list_price" nillable="true" type="xsd:double"/>
+     <element name="auth_prc_amt" nillable="true" type="xsd:double"/>
+     <element name="auth_disc_ot_pc" nillable="true" type="xsd:double"/>
+     <element name="disc_as_pct" nillable="true" type="xsd:double"/>
+     <element name="extended_price" nillable="true" type="xsd:double"/>
+     <element name="comp_level" nillable="true" type="xsd:int"/>
+     <element name="error_id" type="xsd:int"/>
+     <element name="long_prod_desc" nillable="true" type="xsd:string"/>
+     <element name="spcl_config_fl" nillable="true" type="xsd:string"/>
+     <element name="disc" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="GLPProductPriceDateRange">
+    <sequence>
+     <element name="scale_id" type="xsd:int"/>
+     <element name="auth_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="auth_end_dt" nillable="true" type="xsd:string"/>
+     <element name="disc_type_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_lst_prc_am" type="xsd:double"/>
+     <element name="auth_prc_am" type="xsd:double"/>
+     <element name="auth_disc_ot_pc" type="xsd:double"/>
+     <element name="high_rslr_a_sd_pc" type="xsd:double"/>
+     <element name="glpBundleComponentList" nillable="true" type="impl:ArrayOf_tns1_GLPBundleComponent"/>
+     <element name="source_config_id" nillable="true" type="xsd:string"/>
+     <element name="phx_rqst_cust_prc_amt" nillable="true" type="xsd:double"/>
+     <element name="target_adj_disc_pct" nillable="true" type="xsd:double"/>
+     <element name="min_margin_pct" nillable="true" type="xsd:double"/>
+     <element name="target_margin_pct" nillable="true" type="xsd:double"/>
+     <element name="disc" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="GLPProductPriceLine">
+    <sequence>
+     <element name="line_nr" type="xsd:int"/>
+     <element name="line_type_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_base_nr" nillable="true" type="xsd:string"/>
+     <element name="prod_opt_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_line_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_fam_cd" nillable="true" type="xsd:string"/>
+     <element name="prod_desc" nillable="true" type="xsd:string"/>
+     <element name="est_qty" nillable="true" type="xsd:int"/>
+     <element name="est_value" type="xsd:long"/>
+     <element name="fsm_key" nillable="true" type="xsd:string"/>
+     <element name="fsm_type" nillable="true" type="xsd:string"/>
+     <element name="fsm_family_cd" nillable="true" type="xsd:string"/>
+     <element name="fsm_series_cd" nillable="true" type="xsd:string"/>
+     <element name="fsm_model_cd" nillable="true" type="xsd:string"/>
+     <element name="rollout" nillable="true" type="tns3:RolloutSchedule"/>
+     <element name="future_prod_fl" nillable="true" type="xsd:string"/>
+     <element name="use_low_prc_fl" nillable="true" type="xsd:string"/>
+     <element name="disp_comp_pr_fl" nillable="true" type="xsd:string"/>
+     <element name="max_qty_reached_fl" nillable="true" type="xsd:string"/>
+     <element name="max_qty_reached_date" nillable="true" type="xsd:string"/>
+     <element name="config_id" nillable="true" type="xsd:string"/>
+     <element name="config_src" nillable="true" type="xsd:string"/>
+     <element name="spcl_config_fl" nillable="true" type="xsd:string"/>
+     <element name="glpProductPriceDateRangeList" nillable="true" type="impl:ArrayOf_tns1_GLPProductPriceDateRange"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="error_id" type="xsd:int"/>
+     <element name="long_prod_desc" nillable="true" type="xsd:string"/>
+     <element name="geoSplit" nillable="true" type="tns3:GeoSplit"/>
+    </sequence>
+   </complexType>
+   <complexType name="GLPProductPriceLines">
+    <sequence>
+     <element name="bd_nr" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="glpProductPriceLineList" nillable="true" type="impl:ArrayOf_tns1_GLPProductPriceLine"/>
+    </sequence>
+   </complexType>
+   <complexType name="TCExtendedDealHeader">
+    <sequence>
+     <element name="agent_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="attach_fl" nillable="true" type="xsd:string"/>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="catalog_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="comment_fl" nillable="true" type="xsd:string"/>
+     <element name="complex_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="crm_id" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="cust_sat_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_seg_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="deal_lead_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="deliver_by_dt" nillable="true" type="xsd:string"/>
+     <element name="driving_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="dsm_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="est_deal_value" nillable="true" type="xsd:long"/>
+     <element name="euc_rfp_nr" nillable="true" type="xsd:string"/>
+     <element name="industry_nm" nillable="true" type="xsd:string"/>
+     <element name="init_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="intl_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="lang_cd" nillable="true" type="xsd:string"/>
+     <element name="mc_charge" nillable="true" type="xsd:string"/>
+     <element name="non_standard_tc_fl" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="order_bgn_dt" nillable="true" type="xsd:string"/>
+     <element name="order_end_dt" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_cd" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_days" nillable="true" type="xsd:int"/>
+     <element name="prc_pro_rqrd_fl" nillable="true" type="xsd:string"/>
+     <element name="price_auto_apply_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="promotion_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="quote_distrib_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_end_dt" nillable="true" type="xsd:string"/>
+     <element name="supplies_only_fl" nillable="true" type="xsd:string"/>
+     <element name="w_l_prob" nillable="true" type="xsd:double"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+     <element name="drop_ship_fl" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="affiliateList" nillable="true" type="impl:ArrayOf_tns1_Affiliate"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="competitorList" nillable="true" type="impl:ArrayOf_tns1_Competitor"/>
+     <element name="customer" nillable="true" type="tns3:CRMCustomer"/>
+     <element name="multiCountryList" nillable="true" type="impl:ArrayOf_tns1_MultiCountry"/>
+     <element name="othersAuthList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="resellerAList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerBList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerAAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="resellerBAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="salesIncentiveList" nillable="true" type="impl:ArrayOf_tns1_SalesIncentive"/>
+     <element name="salesRepList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="sap_quote_id" nillable="true" type="xsd:string"/>
+     <element name="system_id" nillable="true" type="xsd:string"/>
+     <element name="request_id" nillable="true" type="xsd:string"/>
+     <element name="deal_type_desc" nillable="true" type="xsd:string"/>
+     <element name="deal_type_cd" nillable="true" type="xsd:long"/>
+     <element name="single_cmpny_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_source_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_source_keyval" nillable="true" type="xsd:string"/>
+     <element name="deal_source_deal_type" nillable="true" type="xsd:string"/>
+     <element name="creation_dts" nillable="true" type="xsd:string"/>
+     <element name="deal_risk_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_prog_cd" nillable="true" type="xsd:string"/>
+     <element name="BDME_aprvl_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_cd" nillable="true" type="xsd:string"/>
+     <element name="tier_level" nillable="true" type="xsd:string"/>
+     <element name="tier_name" nillable="true" type="xsd:string"/>
+     <element name="tenantCode" nillable="true" type="xsd:string"/>
+     <element name="mixedTenantCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TCGLPDealHeader">
+    <sequence>
+     <element name="agent_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="attach_fl" nillable="true" type="xsd:string"/>
+     <element name="bd_id" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="beg_dt" nillable="true" type="xsd:string"/>
+     <element name="end_dt" nillable="true" type="xsd:string"/>
+     <element name="bus_model_cd" nillable="true" type="xsd:string"/>
+     <element name="catalog_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="comment_fl" nillable="true" type="xsd:string"/>
+     <element name="complex_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="control_cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="crm_id" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="cust_sat_fl" nillable="true" type="xsd:string"/>
+     <element name="cust_seg_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_desc_tx" nillable="true" type="xsd:string"/>
+     <element name="deal_lead_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="deliver_by_dt" nillable="true" type="xsd:string"/>
+     <element name="driving_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="dsm_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="est_deal_value" nillable="true" type="xsd:long"/>
+     <element name="euc_rfp_nr" nillable="true" type="xsd:string"/>
+     <element name="industry_nm" nillable="true" type="xsd:string"/>
+     <element name="init_hp_emp_nr" nillable="true" type="xsd:int"/>
+     <element name="intl_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt" nillable="true" type="xsd:string"/>
+     <element name="last_save_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="lang_cd" nillable="true" type="xsd:string"/>
+     <element name="mc_charge" nillable="true" type="xsd:string"/>
+     <element name="non_standard_tc_fl" nillable="true" type="xsd:string"/>
+     <element name="opg_num" nillable="true" type="xsd:string"/>
+     <element name="order_bgn_dt" nillable="true" type="xsd:string"/>
+     <element name="order_end_dt" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_cd" nillable="true" type="xsd:string"/>
+     <element name="prc_pro_days" nillable="true" type="xsd:int"/>
+     <element name="prc_pro_rqrd_fl" nillable="true" type="xsd:string"/>
+     <element name="price_auto_apply_fl" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="promotion_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_dt_gmt" nillable="true" type="xsd:string"/>
+     <element name="quote_distrib_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_beg_dt" nillable="true" type="xsd:string"/>
+     <element name="ship_end_dt" nillable="true" type="xsd:string"/>
+     <element name="supplies_only_fl" nillable="true" type="xsd:string"/>
+     <element name="w_l_prob" nillable="true" type="xsd:double"/>
+     <element name="w_l_stat_cd" nillable="true" type="xsd:string"/>
+     <element name="drop_ship_fl" nillable="true" type="xsd:string"/>
+     <element name="price_profile_id" nillable="true" type="xsd:string"/>
+     <element name="affiliateList" nillable="true" type="impl:ArrayOf_tns1_Affiliate"/>
+     <element name="commentList" nillable="true" type="impl:ArrayOf_tns1_Comment"/>
+     <element name="competitorList" nillable="true" type="impl:ArrayOf_tns1_Competitor"/>
+     <element name="customer" nillable="true" type="tns3:CRMCustomer"/>
+     <element name="multiCountryList" nillable="true" type="impl:ArrayOf_tns1_MultiCountry"/>
+     <element name="othersAuthList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="resellerAList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerBList" nillable="true" type="impl:ArrayOf_tns1_Reseller"/>
+     <element name="resellerAAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="resellerBAudienceList" nillable="true" type="impl:ArrayOf_tns1_ResellerAudience"/>
+     <element name="salesIncentiveList" nillable="true" type="impl:ArrayOf_tns1_SalesIncentive"/>
+     <element name="salesRepList" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="sap_quote_id" nillable="true" type="xsd:string"/>
+     <element name="system_id" nillable="true" type="xsd:string"/>
+     <element name="request_id" nillable="true" type="xsd:string"/>
+     <element name="deal_type_desc" nillable="true" type="xsd:string"/>
+     <element name="deal_type_cd" nillable="true" type="xsd:long"/>
+     <element name="single_cmpny_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_source_cd" nillable="true" type="xsd:string"/>
+     <element name="deal_source_keyval" nillable="true" type="xsd:string"/>
+     <element name="deal_source_deal_type" nillable="true" type="xsd:string"/>
+     <element name="creation_dts" nillable="true" type="xsd:string"/>
+     <element name="deal_risk_fl" nillable="true" type="xsd:string"/>
+     <element name="deal_prog_cd" nillable="true" type="xsd:string"/>
+     <element name="BDME_aprvl_cd" nillable="true" type="xsd:string"/>
+     <element name="quote_dist_cd" nillable="true" type="xsd:string"/>
+     <element name="tier_level" nillable="true" type="xsd:string"/>
+     <element name="tier_name" nillable="true" type="xsd:string"/>
+     <element name="glp_deal_fl" nillable="true" type="xsd:string"/>
+     <element name="total_addtl_disc_fl" nillable="true" type="xsd:string"/>
+     <element name="tenantCode" nillable="true" type="xsd:string"/>
+     <element name="mixedTenantCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TCProductPriceLines">
+    <sequence>
+     <element name="bd_nr" type="xsd:long"/>
+     <element name="bd_version_nr" type="xsd:int"/>
+     <element name="cntry_cd" nillable="true" type="xsd:string"/>
+     <element name="price_list_cd" nillable="true" type="xsd:string"/>
+     <element name="curr_cd" nillable="true" type="xsd:string"/>
+     <element name="price_term_cd" nillable="true" type="xsd:string"/>
+     <element name="productPriceLineList" nillable="true" type="impl:ArrayOf_tns1_ProductPriceLine"/>
+     <element name="tenantCode" nillable="true" type="xsd:string"/>
+     <element name="mixedTenantCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TCActionResult">
+    <sequence>
+     <element name="nr" nillable="true" type="xsd:long"/>
+     <element name="str" nillable="true" type="xsd:string"/>
+     <element name="resultCode" type="xsd:int"/>
+     <element name="messageList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="tenantCode" nillable="true" type="xsd:string"/>
+     <element name="mixedTenantCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://beans.bd.ews.hp.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://util.ews.hp.com"/>
+   <import namespace="urn:ews-structs"/>
+   <import namespace="urn:EWSDealImpl"/>
+   <import namespace="http://server.ews.hp.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="AirQuantity">
+    <sequence>
+     <element name="line_nr" type="xsd:int"/>
+     <element name="air_max_qty" type="xsd:long"/>
+     <element name="air_consumed_qty" type="xsd:long"/>
+     <element name="remaining_air_qty" type="xsd:long"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+     <wsdl:message name="loginRequest">
+
+          <wsdl:part name="version" type="xsd:string"/>
+
+          <wsdl:part name="user" type="xsd:string"/>
+
+          <wsdl:part name="password" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="loginResponse">
+
+          <wsdl:part name="loginReturn" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="BusinessRuleException">
+
+          <wsdl:part name="fault" type="tns1:BusinessRuleException"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="ServerException">
+
+          <wsdl:part name="fault" type="tns2:ServerException"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="ThrottleException">
+
+          <wsdl:part name="fault" type="tns1:ThrottleException"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="logoutRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="logoutResponse">
+
+          <wsdl:part name="logoutReturn" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="pingRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="message" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="pingResponse">
+
+          <wsdl:part name="pingReturn" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getServerParametersRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getServerParametersResponse">
+
+          <wsdl:part name="getServerParametersReturn" type="intf:ArrayOf_xsd_string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="setSessionParameterRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="pName" type="xsd:string"/>
+
+          <wsdl:part name="pValue" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="setSessionParameterResponse">
+
+          <wsdl:part name="setSessionParameterReturn" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getSessionParameterRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="pName" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getSessionParameterResponse">
+
+          <wsdl:part name="getSessionParameterReturn" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getSessionParametersRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getSessionParametersResponse">
+
+          <wsdl:part name="getSessionParametersReturn" type="intf:ArrayOf_xsd_string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="createRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealHeader" type="tns3:DealHeader"/>
+
+          <wsdl:part name="productPriceLines" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="createResponse">
+
+          <wsdl:part name="createReturn" type="tns3:ActionResult"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderResponse">
+
+          <wsdl:part name="getHeaderReturn" type="tns3:DealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderVersRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="versionNr" type="xsd:int"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderVersResponse">
+
+          <wsdl:part name="getHeaderReturn" type="tns3:DealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderWithTCRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderWithTCResponse">
+
+          <wsdl:part name="getHeaderTCReturn" type="tns3:TCDealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderVersWithTCRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="versionNr" type="xsd:int"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getHeaderVersWithTCResponse">
+
+          <wsdl:part name="getHeaderVersTCReturn" type="tns3:TCDealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNrInputParams" type="tns3:DealNrInputParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityResponse">
+
+          <wsdl:part name="getActivityReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityHPFRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNrInputParamsWithTruncFlag" type="tns3:DealNrInputParamsWithTruncFlag"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityHPFResponse">
+
+          <wsdl:part name="getActivityHPFReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityHPIRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNrInputParamsWithTruncFlag" type="tns3:DealNrInputParamsWithTruncFlag"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityHPIResponse">
+
+          <wsdl:part name="getActivityHPIReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityGlobalRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="globalActivityParams" type="tns3:GlobalActivityParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityGlobalResponse">
+
+          <wsdl:part name="getActivityGlobalReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityGlobalHPFRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="globalActivityHPFParams" type="tns3:GlobalActivityHPFParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityGlobalHPFResponse">
+
+          <wsdl:part name="getActivityGlobalHPFReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingResponse">
+
+          <wsdl:part name="getPricingReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getProductPriceListRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="productPriceListParams" type="tns3:ProductPriceListParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getProductPriceListResponse">
+
+          <wsdl:part name="getProductPriceListReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getProductPriceListGlobalRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="productPriceListGlobalParams" type="tns3:ProductPriceListGlobalParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getProductPriceListGlobalResponse">
+
+          <wsdl:part name="getProductPriceListGlobalReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getProductPriceListGlobalByDateRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="productPriceListGlobalByDateParams" type="tns3:ProductPriceListGlobalByDateParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getProductPriceListGlobalByDateResponse">
+
+          <wsdl:part name="getProductPriceListGlobalByDateReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingGlobalRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="cntry_cd" type="xsd:string"/>
+
+          <wsdl:part name="price_list_cd" type="xsd:string"/>
+
+          <wsdl:part name="curr_cd" type="xsd:string"/>
+
+          <wsdl:part name="price_term_cd" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingGlobalResponse">
+
+          <wsdl:part name="getPricingGlobalReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingGlobalVersRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="versionNr" type="xsd:int"/>
+
+          <wsdl:part name="cntry_cd" type="xsd:string"/>
+
+          <wsdl:part name="price_list_cd" type="xsd:string"/>
+
+          <wsdl:part name="curr_cd" type="xsd:string"/>
+
+          <wsdl:part name="price_term_cd" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingGlobalVersResponse">
+
+          <wsdl:part name="getPricingGlobalReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingGlobalByDateRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="cntry_cd" type="xsd:string"/>
+
+          <wsdl:part name="price_list_cd" type="xsd:string"/>
+
+          <wsdl:part name="curr_cd" type="xsd:string"/>
+
+          <wsdl:part name="price_term_cd" type="xsd:string"/>
+
+          <wsdl:part name="date" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getPricingGlobalByDateResponse">
+
+          <wsdl:part name="getPricingGlobalByDateReturn" type="tns3:ProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getRemainingQuantityRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="remQtyInputParams" type="tns3:RemQtyInputParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getRemainingQuantityResponse">
+
+          <wsdl:part name="getRemainingQuantityReturn" type="tns3:RemainingQuantities"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getRemainingQuantityHistoryRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="line_nr" type="xsd:int"/>
+
+          <wsdl:part name="frequency" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getRemainingQuantityHistoryResponse">
+
+          <wsdl:part name="getRemainingQuantityHistoryReturn" type="tns3:RemainingQuantitiesHistory"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="putCustomerRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="customer" type="tns3:CRMCustomer"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="putCustomerResponse">
+
+          <wsdl:part name="putCustomerReturn" type="tns3:ActionResult"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="findCustomersRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="customer" type="tns3:CRMCustomer"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="findCustomersResponse">
+
+          <wsdl:part name="findCustomersReturn" type="intf:ArrayOf_tns1_CRMCustomer"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getCustomersUpdatedRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="startDt" type="xsd:string"/>
+
+          <wsdl:part name="endDt" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getCustomersUpdatedResponse">
+
+          <wsdl:part name="getCustomersUpdatedReturn" type="intf:ArrayOf_tns1_CRMCustomer"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getDealHeaderRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="deal_type_fl" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getDealHeaderResponse">
+
+          <wsdl:part name="getDealHeaderReturn" type="tns3:ExtendedDealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getMasterDealIdRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealId" type="xsd:long"/>
+
+          <wsdl:part name="deal_type_fl" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getMasterDealIdResponse">
+
+          <wsdl:part name="getMasterDealIdReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getDealPricingRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="deal_type_fl" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getDealPricingResponse">
+
+          <wsdl:part name="getDealPricingReturn" type="tns3:ExtendedProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityGlobalHPIRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="globalActivityHPIParams" type="tns3:globalActivityHPIParams"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getActivityGlobalHPIResponse">
+
+          <wsdl:part name="getActivityGlobalHPIReturn" type="intf:ArrayOf_xsd_long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getGLPDealHeaderRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getGLPDealHeaderResponse">
+
+          <wsdl:part name="getGLPDealHeaderReturn" type="tns3:GLPDealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getGLPPricingRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getGLPPricingResponse">
+
+          <wsdl:part name="getGLPPricingReturn" type="tns3:GLPProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getDealHeaderWithTCRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+          <wsdl:part name="deal_type_fl" type="xsd:string"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getDealHeaderWithTCResponse">
+
+          <wsdl:part name="getDealHeaderWithTCReturn" type="tns3:TCExtendedDealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getGLPDealHeaderWithTCRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="dealNr" type="xsd:long"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="getGLPDealHeaderWithTCResponse">
+
+          <wsdl:part name="getGLPDealHeaderWithTCReturn" type="tns3:TCGLPDealHeader"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="createWithTCRequest">
+
+          <wsdl:part name="token" type="xsd:string"/>
+
+          <wsdl:part name="tcdealHeader" type="tns3:TCDealHeader"/>
+
+          <wsdl:part name="tcproductPriceLines" type="tns3:TCProductPriceLines"/>
+
+     </wsdl:message>
+
+     <wsdl:message name="createWithTCResponse">
+
+          <wsdl:part name="createWithTCReturn" type="tns3:TCActionResult"/>
+
+     </wsdl:message>
+
+     <wsdl:portType name="DealImpl">
+
+          <wsdl:operation name="login" parameterOrder="version user password">
+
+               <wsdl:input message="intf:loginRequest" name="loginRequest"/>
+
+               <wsdl:output message="intf:loginResponse" name="loginResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="logout" parameterOrder="token">
+
+               <wsdl:input message="intf:logoutRequest" name="logoutRequest"/>
+
+               <wsdl:output message="intf:logoutResponse" name="logoutResponse"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="ping" parameterOrder="token message">
+
+               <wsdl:input message="intf:pingRequest" name="pingRequest"/>
+
+               <wsdl:output message="intf:pingResponse" name="pingResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getServerParameters" parameterOrder="token">
+
+               <wsdl:input message="intf:getServerParametersRequest" name="getServerParametersRequest"/>
+
+               <wsdl:output message="intf:getServerParametersResponse" name="getServerParametersResponse"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="setSessionParameter" parameterOrder="token pName pValue">
+
+               <wsdl:input message="intf:setSessionParameterRequest" name="setSessionParameterRequest"/>
+
+               <wsdl:output message="intf:setSessionParameterResponse" name="setSessionParameterResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getSessionParameter" parameterOrder="token pName">
+
+               <wsdl:input message="intf:getSessionParameterRequest" name="getSessionParameterRequest"/>
+
+               <wsdl:output message="intf:getSessionParameterResponse" name="getSessionParameterResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getSessionParameters" parameterOrder="token">
+
+               <wsdl:input message="intf:getSessionParametersRequest" name="getSessionParametersRequest"/>
+
+               <wsdl:output message="intf:getSessionParametersResponse" name="getSessionParametersResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="create" parameterOrder="token dealHeader productPriceLines">
+
+               <wsdl:input message="intf:createRequest" name="createRequest"/>
+
+               <wsdl:output message="intf:createResponse" name="createResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeader" parameterOrder="token dealNr">
+
+               <wsdl:input message="intf:getHeaderRequest" name="getHeaderRequest"/>
+
+               <wsdl:output message="intf:getHeaderResponse" name="getHeaderResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeaderVers" parameterOrder="token dealNr versionNr">
+
+               <wsdl:input message="intf:getHeaderVersRequest" name="getHeaderVersRequest"/>
+
+               <wsdl:output message="intf:getHeaderVersResponse" name="getHeaderVersResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeaderWithTC" parameterOrder="token dealNr">
+
+               <wsdl:input message="intf:getHeaderWithTCRequest" name="getHeaderWithTCRequest"/>
+
+               <wsdl:output message="intf:getHeaderWithTCResponse" name="getHeaderWithTCResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeaderVersWithTC" parameterOrder="token dealNr versionNr">
+
+               <wsdl:input message="intf:getHeaderVersWithTCRequest" name="getHeaderVersWithTCRequest"/>
+
+               <wsdl:output message="intf:getHeaderVersWithTCResponse" name="getHeaderVersWithTCResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivity" parameterOrder="token dealNrInputParams">
+
+               <wsdl:input message="intf:getActivityRequest" name="getActivityRequest"/>
+
+               <wsdl:output message="intf:getActivityResponse" name="getActivityResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityHPF" parameterOrder="token dealNrInputParamsWithTruncFlag">
+
+               <wsdl:input message="intf:getActivityHPFRequest" name="getActivityHPFRequest"/>
+
+               <wsdl:output message="intf:getActivityHPFResponse" name="getActivityHPFResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityHPI" parameterOrder="token dealNrInputParamsWithTruncFlag">
+
+               <wsdl:input message="intf:getActivityHPIRequest" name="getActivityHPIRequest"/>
+
+               <wsdl:output message="intf:getActivityHPIResponse" name="getActivityHPIResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityGlobal" parameterOrder="token globalActivityParams">
+
+               <wsdl:input message="intf:getActivityGlobalRequest" name="getActivityGlobalRequest"/>
+
+               <wsdl:output message="intf:getActivityGlobalResponse" name="getActivityGlobalResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityGlobalHPF" parameterOrder="token globalActivityHPFParams">
+
+               <wsdl:input message="intf:getActivityGlobalHPFRequest" name="getActivityGlobalHPFRequest"/>
+
+               <wsdl:output message="intf:getActivityGlobalHPFResponse" name="getActivityGlobalHPFResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricing" parameterOrder="token dealNr">
+
+               <wsdl:input message="intf:getPricingRequest" name="getPricingRequest"/>
+
+               <wsdl:output message="intf:getPricingResponse" name="getPricingResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getProductPriceList" parameterOrder="token productPriceListParams">
+
+               <wsdl:input message="intf:getProductPriceListRequest" name="getProductPriceListRequest"/>
+
+               <wsdl:output message="intf:getProductPriceListResponse" name="getProductPriceListResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getProductPriceListGlobal" parameterOrder="token productPriceListGlobalParams">
+
+               <wsdl:input message="intf:getProductPriceListGlobalRequest" name="getProductPriceListGlobalRequest"/>
+
+               <wsdl:output message="intf:getProductPriceListGlobalResponse" name="getProductPriceListGlobalResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getProductPriceListGlobalByDate" parameterOrder="token productPriceListGlobalByDateParams">
+
+               <wsdl:input message="intf:getProductPriceListGlobalByDateRequest" name="getProductPriceListGlobalByDateRequest"/>
+
+               <wsdl:output message="intf:getProductPriceListGlobalByDateResponse" name="getProductPriceListGlobalByDateResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricingGlobal" parameterOrder="token dealNr cntry_cd price_list_cd curr_cd price_term_cd">
+
+               <wsdl:input message="intf:getPricingGlobalRequest" name="getPricingGlobalRequest"/>
+
+               <wsdl:output message="intf:getPricingGlobalResponse" name="getPricingGlobalResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricingGlobalVers" parameterOrder="token dealNr versionNr cntry_cd price_list_cd curr_cd price_term_cd">
+
+               <wsdl:input message="intf:getPricingGlobalVersRequest" name="getPricingGlobalVersRequest"/>
+
+               <wsdl:output message="intf:getPricingGlobalVersResponse" name="getPricingGlobalVersResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricingGlobalByDate" parameterOrder="token dealNr cntry_cd price_list_cd curr_cd price_term_cd date">
+
+               <wsdl:input message="intf:getPricingGlobalByDateRequest" name="getPricingGlobalByDateRequest"/>
+
+               <wsdl:output message="intf:getPricingGlobalByDateResponse" name="getPricingGlobalByDateResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getRemainingQuantity" parameterOrder="token remQtyInputParams">
+
+               <wsdl:input message="intf:getRemainingQuantityRequest" name="getRemainingQuantityRequest"/>
+
+               <wsdl:output message="intf:getRemainingQuantityResponse" name="getRemainingQuantityResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getRemainingQuantityHistory" parameterOrder="token dealNr line_nr frequency">
+
+               <wsdl:input message="intf:getRemainingQuantityHistoryRequest" name="getRemainingQuantityHistoryRequest"/>
+
+               <wsdl:output message="intf:getRemainingQuantityHistoryResponse" name="getRemainingQuantityHistoryResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="putCustomer" parameterOrder="token customer">
+
+               <wsdl:input message="intf:putCustomerRequest" name="putCustomerRequest"/>
+
+               <wsdl:output message="intf:putCustomerResponse" name="putCustomerResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="findCustomers" parameterOrder="token customer">
+
+               <wsdl:input message="intf:findCustomersRequest" name="findCustomersRequest"/>
+
+               <wsdl:output message="intf:findCustomersResponse" name="findCustomersResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getCustomersUpdated" parameterOrder="token startDt endDt">
+
+               <wsdl:input message="intf:getCustomersUpdatedRequest" name="getCustomersUpdatedRequest"/>
+
+               <wsdl:output message="intf:getCustomersUpdatedResponse" name="getCustomersUpdatedResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getDealHeader" parameterOrder="token dealNr deal_type_fl">
+
+               <wsdl:input message="intf:getDealHeaderRequest" name="getDealHeaderRequest"/>
+
+               <wsdl:output message="intf:getDealHeaderResponse" name="getDealHeaderResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getMasterDealId" parameterOrder="token dealId deal_type_fl">
+
+               <wsdl:input message="intf:getMasterDealIdRequest" name="getMasterDealIdRequest"/>
+
+               <wsdl:output message="intf:getMasterDealIdResponse" name="getMasterDealIdResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getDealPricing" parameterOrder="token dealNr deal_type_fl">
+
+               <wsdl:input message="intf:getDealPricingRequest" name="getDealPricingRequest"/>
+
+               <wsdl:output message="intf:getDealPricingResponse" name="getDealPricingResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityGlobalHPI" parameterOrder="token globalActivityHPIParams">
+
+               <wsdl:input message="intf:getActivityGlobalHPIRequest" name="getActivityGlobalHPIRequest"/>
+
+               <wsdl:output message="intf:getActivityGlobalHPIResponse" name="getActivityGlobalHPIResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getGLPDealHeader" parameterOrder="token dealNr">
+
+               <wsdl:input message="intf:getGLPDealHeaderRequest" name="getGLPDealHeaderRequest"/>
+
+               <wsdl:output message="intf:getGLPDealHeaderResponse" name="getGLPDealHeaderResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getGLPPricing" parameterOrder="token dealNr">
+
+               <wsdl:input message="intf:getGLPPricingRequest" name="getGLPPricingRequest"/>
+
+               <wsdl:output message="intf:getGLPPricingResponse" name="getGLPPricingResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getDealHeaderWithTC" parameterOrder="token dealNr deal_type_fl">
+
+               <wsdl:input message="intf:getDealHeaderWithTCRequest" name="getDealHeaderWithTCRequest"/>
+
+               <wsdl:output message="intf:getDealHeaderWithTCResponse" name="getDealHeaderWithTCResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getGLPDealHeaderWithTC" parameterOrder="token dealNr">
+
+               <wsdl:input message="intf:getGLPDealHeaderWithTCRequest" name="getGLPDealHeaderWithTCRequest"/>
+
+               <wsdl:output message="intf:getGLPDealHeaderWithTCResponse" name="getGLPDealHeaderWithTCResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="createWithTC" parameterOrder="token tcdealHeader tcproductPriceLines">
+
+               <wsdl:input message="intf:createWithTCRequest" name="createWithTCRequest"/>
+
+               <wsdl:output message="intf:createWithTCResponse" name="createWithTCResponse"/>
+
+               <wsdl:fault message="intf:BusinessRuleException" name="BusinessRuleException"/>
+
+               <wsdl:fault message="intf:ServerException" name="ServerException"/>
+
+               <wsdl:fault message="intf:ThrottleException" name="ThrottleException"/>
+
+          </wsdl:operation>
+
+     </wsdl:portType>
+
+     <wsdl:binding name="EWSDealSoapBinding" type="intf:DealImpl">
+
+          <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+          <wsdl:operation name="login">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="loginRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="loginResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="logout">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="logoutRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="logoutResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="ping">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="pingRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="pingResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getServerParameters">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getServerParametersRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getServerParametersResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="setSessionParameter">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="setSessionParameterRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="setSessionParameterResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getSessionParameter">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getSessionParameterRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getSessionParameterResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getSessionParameters">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getSessionParametersRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://server.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getSessionParametersResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="create">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="createRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="createResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeader">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getHeaderRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getHeaderResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeaderVers">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getHeaderVersRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getHeaderVersResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeaderWithTC">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getHeaderWithTCRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getHeaderWithTCResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getHeaderVersWithTC">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getHeaderVersWithTCRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getHeaderVersWithTCResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivity">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getActivityRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getActivityResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityHPF">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getActivityHPFRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getActivityHPFResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityHPI">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getActivityHPIRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getActivityHPIResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityGlobal">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getActivityGlobalRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getActivityGlobalResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityGlobalHPF">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getActivityGlobalHPFRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getActivityGlobalHPFResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricing">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getPricingRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getPricingResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getProductPriceList">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getProductPriceListRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getProductPriceListResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getProductPriceListGlobal">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getProductPriceListGlobalRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getProductPriceListGlobalResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getProductPriceListGlobalByDate">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getProductPriceListGlobalByDateRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getProductPriceListGlobalByDateResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricingGlobal">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getPricingGlobalRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getPricingGlobalResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricingGlobalVers">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getPricingGlobalVersRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getPricingGlobalVersResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getPricingGlobalByDate">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getPricingGlobalByDateRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getPricingGlobalByDateResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getRemainingQuantity">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getRemainingQuantityRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getRemainingQuantityResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getRemainingQuantityHistory">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getRemainingQuantityHistoryRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getRemainingQuantityHistoryResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="putCustomer">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="putCustomerRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="putCustomerResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="findCustomers">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="findCustomersRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="findCustomersResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getCustomersUpdated">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getCustomersUpdatedRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getCustomersUpdatedResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getDealHeader">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getDealHeaderRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getDealHeaderResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getMasterDealId">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getMasterDealIdRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getMasterDealIdResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getDealPricing">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getDealPricingRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getDealPricingResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getActivityGlobalHPI">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getActivityGlobalHPIRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getActivityGlobalHPIResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getGLPDealHeader">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getGLPDealHeaderRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getGLPDealHeaderResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getGLPPricing">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getGLPPricingRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getGLPPricingResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getDealHeaderWithTC">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getDealHeaderWithTCRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getDealHeaderWithTCResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="getGLPDealHeaderWithTC">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="getGLPDealHeaderWithTCRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="getGLPDealHeaderWithTCResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+          <wsdl:operation name="createWithTC">
+
+               <wsdlsoap:operation soapAction=""/>
+
+               <wsdl:input name="createWithTCRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://bd.ews.hp.com" use="encoded"/>
+
+               </wsdl:input>
+
+               <wsdl:output name="createWithTCResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:output>
+
+               <wsdl:fault name="BusinessRuleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BusinessRuleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ServerException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ServerException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+               <wsdl:fault name="ThrottleException">
+
+                    <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ThrottleException" namespace="urn:EWSDealImpl" use="encoded"/>
+
+               </wsdl:fault>
+
+          </wsdl:operation>
+
+     </wsdl:binding>
+
+     <wsdl:service name="DealImplService">
+
+          <wsdl:port binding="intf:EWSDealSoapBinding" name="EWSDeal">
+
+               <wsdlsoap:address location="http://ewsitg1.inc.hpicorp.net/dcc/ews73/services/EWSDeal"/>
+
+          </wsdl:port>
+
+     </wsdl:service>
+
+</wsdl:definitions>
